@@ -1,68 +1,239 @@
-/* General Styles */
+/* Main Stylesheet for the Website */
+
+/* Chapter 1: Critical Layout Styles - Highest Priority */
+/* 1.1 - General Styles for Body */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif; /* Uniform font for better readability */
+    font-size: 16px; /* Standard text size for readability */
     line-height: 1.6;
+    letter-spacing: 0.15px;
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    padding-top: 60px; /* Space for fixed navbar */
+    background-color: #f3effa; /* Soft purple background for a light theme */
 }
 
-/* Container */
-.container {
-    width: 80%;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-/* Header */
-header {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-/* Main Content */
-.main-content {
-    padding: 20px;
-    background: #fff;
-}
-
-/* Footer */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
+/* 1.2 - Navigation Menu */
+nav {
+    background-color: #7E57C2; /* Purple background for distinct appearance */
+    color: #fff; /* White text for contrast */
     padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    position: fixed; /* Fixed at the top */
+    width: 100%; /* Full width */
+    top: 0;
+    z-index: 1000; /* Ensures navigation stays on top */
+    text-align: center;
 }
 
-/* Table Styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Horizontal alignment */
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px; /* Space between items */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: #673AB7; /* Darker purple on hover/active */
+    font-weight: bold;
+}
+
+.active {
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Chapter 2: Content Display - Important for Usability */
+/* 2.1 - Section Styling */
+section {
+    width: 40%; /* Adjusted width for better focus on content */
+    margin: 20px auto; /* Centering sections */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px; /* Rounded corners for modern look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+section h2, section p {
+    color: #333; /* Consistent text color */
+    margin-bottom: 10px; /* Space below headings */
+}
+
+section p {
+    font-size: 16px; /* Legible text size */
+    line-height: 1.6;
+}
+
+/* 2.2 - Cookie Consent Popup */
+.cookie-consent {
+    position: fixed;
+    bottom: 0px;
+    left: 50%;   
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: rgba(248, 249, 250, 0.95);
+    text-align: center;
+    padding: 0px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-top: 2px solid #7E57C2;
+    border-radius: 3px;
+    display: flex; /* Hidden by default, switch to flex from none */
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Ensure it appears above other elements */ 
+}
+
+.cookie-consent.hidden {
+    display: none !important;
+}
+
+.cookie-consent p {
+    margin: 15px;
+    font-size: 14px;
+    flex-grow: 1;
+}    
+
+/*
+.cookie-consent a {
+    color: none !important; 
+    text-decoration: none;
+    }
+*/
+
+.cookie-consent button {
+    background-color: #7a47d3;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 0px;
+    margin-left: 15px;
+}
+
+.cookie-consent button:hover {
+    background-color: #673AB7; /* Slightly darker on hover */
+}
+
+/* 2.3 - Images */
+
+.image-container {
+    max-width: 90%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 2.4 - Links */
+a {
+    color: #5462e1; /* Standard blue color for links */
+    text-decoration: none; /* Ensure links are underlined */
+}
+
+a:hover {
+    color: #1827a7; /* Slightly darker blue for hover state */
+    text-decoration: underline;
+    font-weight: bold!important;
+}
+
+/* To ensure global styles don't affect nav links */
+nav ul li a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Point form or Lists */
+
+ul li {
+    margin-bottom: 0px; /* Keep this off or at 0 px, as it messes up the nav menu which is also a list */
+}
+
+/* Add spacing to lists in content sections which we tag as content-list, which allows us to keep other lists as they are. */
+
+.content-list li {
+    margin-bottom: 10px;    
+}
+
+/* Chapter 3: Auxiliary Styles - Enhancing Aesthetics */
+/* 3.1 - Buttons and Links */
+.button, button {
+    background-color: #4CAF50; /* Green for visibility */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button:hover, button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* 3.2 - Tables for Structured Data */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
-}
-
-table, th, td {
-    border: 1px solid #ddd;
 }
 
 th, td {
+    border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
 }
 
 th {
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* Light grey for headers */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        width: 100%;
-        padding: 0 10px;
+/* 3.3 - Hidden */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* Chapter 4: Responsive Design - Ensuring Accessibility on Mobile Devices */
+@media (max-width: 700px) {
+    .container, nav a {
+        width: 100%; /* Full width for smaller screens */
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    nav ul li {
+        text-align: center; /* Center-align items */
+        margin-right: 0; /* No right margin */
     }
 }
+
+/* Chapter 5: Footer Styles - Consistency at the Page Bottom */
+footer {
+    background: #f3effa;
+    color: #333;
+    text-align: center;
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+}
+
