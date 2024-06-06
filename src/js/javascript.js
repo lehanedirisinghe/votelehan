@@ -115,11 +115,15 @@
                 linkPath += '/';
             }
 
+            console.log('Link Path:', linkPath);
+
             // 21. Add 'active' class to the current link and remove from others
             if (linkPath === currentPath) {
                 link.classList.add('active');
+                console.log('Adding active class to: ${linkPath}');
             } else {
                 link.classList.remove('active'); // Ensure only the relevant item is active
+                console.log('Removing active class from: ${linkPath}');
             }
         });
         console.log('Navigation Event Listeners Added');
@@ -153,9 +157,9 @@
 
         // 27. Update button text based on section visibility
         if (section.classList.contains('hidden')) {
-            button.textContent = 'See More';
+            button.textContent = 'Reveal more';
         } else {
-            button.textContent = 'See Less';
+            button.textContent = 'Hide this';
         }
         console.log(`Toggled section with id="${sectionId}"`);
     }

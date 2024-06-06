@@ -4,6 +4,7 @@
 /* 1.1 - General Styles for Body */
 body {
     font-family: 'Roboto', Arial, sans-serif; /* Uniform font for better readability */
+    color: #333;
     font-size: 16px; /* Standard text size for readability */
     line-height: 1.6;
     letter-spacing: 0.15px;
@@ -14,9 +15,9 @@ body {
 
 /* 1.2 - Navigation Menu */
 nav {
-    background-color: #7E57C2; /* Purple background for distinct appearance */
+    background-color: #875EC7; /* Purple background for distinct appearance */
     color: #fff; /* White text for contrast */
-    padding: 10px 0;
+    padding: 0px 0px;
     position: fixed; /* Fixed at the top */
     width: 100%; /* Full width */
     top: 0;
@@ -29,36 +30,44 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex; /* Horizontal alignment */
-    justify-content: center;
+    justify-content: center; /* Center items horizontally */
 }
 
 nav ul li {
-    display: inline-block;
+    display: inline;
     margin-right: 20px; /* Space between items */
 }
 
 nav ul li a {
     color: #fff;
+    width: auto;
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 7px 8px;
+    display: inline-block;
+    text-align: center;
+    transition: font-weight 0.25s, background-color 0.25s;
 }
 
-nav ul li a:hover, nav ul li a.active {
-    background-color: #673AB7; /* Darker purple on hover/active */
-    font-weight: bold;
+nav ul li a:hover {
+    background-color: #582aa6; /* Darker purple on hover/active */
+    font-weight: normal;
+    color: #fff;
+    padding: 7px 8px;
 }
 
-.active {
+nav ul li a.active {
+    background-color: #582aa6;
     font-weight: bold;
     color: #fff;
+    padding: auto;
 }
 
 /* Chapter 2: Content Display - Important for Usability */
 /* 2.1 - Section Styling */
 section {
     width: 40%; /* Adjusted width for better focus on content */
-    margin: 20px auto; /* Centering sections */
-    padding: 20px;
+    margin: 30px auto; /* Centering sections */
+    padding: 20px 30px;
     background-color: #ffffff;
     border-radius: 8px; /* Rounded corners for modern look */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
@@ -70,6 +79,7 @@ section h2, section p {
 }
 
 section p {
+    color: #444;
     font-size: 16px; /* Legible text size */
     line-height: 1.6;
 }
@@ -98,7 +108,7 @@ section p {
 }
 
 .cookie-consent p {
-    margin: 15px;
+    margin: 10px;
     font-size: 14px;
     flex-grow: 1;
 }    
@@ -111,12 +121,12 @@ section p {
 */
 
 .cookie-consent button {
-    background-color: #7a47d3;
+    background-color: #875EC7;
     color: white;
     border: none;
-    padding: 5px 10px;
+    padding: 10px 10px;
     cursor: pointer;
-    border-radius: 0px;
+    border-radius: 5px;
     margin-left: 15px;
 }
 
@@ -149,7 +159,7 @@ a {
 a:hover {
     color: #1827a7; /* Slightly darker blue for hover state */
     text-decoration: underline;
-    font-weight: bold!important;
+    font-weight: bold;
 }
 
 /* To ensure global styles don't affect nav links */
@@ -161,13 +171,15 @@ nav ul li a:hover {
 /* Point form or Lists */
 
 ul li {
-    margin-bottom: 0px; /* Keep this off or at 0 px, as it messes up the nav menu which is also a list */
+    margin-bottom: 5px;
+    color: #666; /* Keep this off or at 0 px, as it messes up the nav menu which is also a list */
 }
 
 /* Add spacing to lists in content sections which we tag as content-list, which allows us to keep other lists as they are. */
 
 .content-list li {
-    margin-bottom: 10px;    
+    margin-bottom: 15px;
+    color: #666;    
 }
 
 /* Chapter 3: Auxiliary Styles - Enhancing Aesthetics */

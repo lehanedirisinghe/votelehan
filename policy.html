@@ -9,22 +9,27 @@
     <link rel="icon" href="/src/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/src/images/favicon-32x32.png" sizes="32x32" type="image/png">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
-    <link rel="preload" href="/src/css/styles.css" as="style" onload="this; onload=null;this.rel='stylesheet'">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rell="stylesheet" href="/src/css/styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     </noscript>
 
+    <link rel="preload" href="/src/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/src/css/styles.css">
+    </noscript>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
     <script src="/src/js/javascript.js" defer></script> <!-- Include the main script -->
-</head>
 
 <body>
     <header>
         <nav>
             <ul id="menu">
                 <li><a href="/index.html">Vote Lehan</a></li>
-                <li><a href="/policy.html">Policy</a></li>
+                <li><a href="/policy.html" class="active">Policy</a></li>
                 <li><a href="/economy.html">Economy</a></li>
                 <li><a href="/social.html">Social</a></li>
                 <li><a href="/story.html">Story</a></li>
@@ -32,15 +37,7 @@
             </ul>
         </nav>
     </header>
-
 <main>
-
-    <section id="votelehan">
-        <h1>VoteLehan.com </h1>
-        <p>Hi, I'm Lehan. You found my vision for a developed Sri Lanka. I outline all I plan to do in this simple 10-minute summary: </p>
-    </section>
-
-    </section>
 
     <section id="policy">
         <h2>1. Policy</h2>
@@ -57,11 +54,14 @@
         </ul> 
     </section>
 
+
+    
 </main>
 <footer>
     <div id="cookie-consent" class="cookie-consent">
-        <p>We use cookies on our website based on <a href="/terms.html">Terms</a>.</p>
-        <button id="cookie-accept">Accept</button>
+        <p>We use cookies to improve your experience based on <a href="/terms.html">Terms</a>.
+            <button id="cookie-accept">Okay, that's fine!</button>
+        </p>
     </div>
 </footer>
 </body>

@@ -105,19 +105,6 @@ function acceptCookies() {
     // Bla bla it shows up
     // Enter code here for modal pop-up creation and management
 
-    // 15. Menu Highlight to Identify Location
-    // Highlight the active navigation link based on current page
-    
-    var currentPath = window.location.pathname; // Get the current path
-    var links = document.querySelectorAll('nav a'); // Select all nav links
-
-    // Iterate over each link and add 'active' class if href matches the current path
-    links.forEach(function(link) {
-        if (link.getAttribute('href') === currentPath) {
-            link.classList.add('active');
-        }
-    });
-
     // 16. Scroll to Top Button
     // Show a button that scrolls back to the top of the page when clicked
     var scrollToTopBtn = document.querySelector('.scroll-to-top'); // Select scroll-to-top button
@@ -125,3 +112,13 @@ function acceptCookies() {
 // Close the document ready event listener  
 
     }
+
+    // Remember: TO DO LIST:
+    // Switch from local to session storage
+    // Fog of war scroll reveal
+    // search
+    // Return to top
+    // Music or sound effects
+    // Observer JS
+    // Animations perhaps
+    // promises, as audio crash risk
