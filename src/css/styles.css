@@ -1,12 +1,13 @@
 /* Main Stylesheet for the Website */
 
 /* Chapter 1: Critical Layout Styles - Highest Priority */
+
 /* 1.1 - General Styles for Body */
 body {
     font-family: 'Roboto', Arial, sans-serif; /* Uniform font for better readability */
     color: #333;
     font-size: 16px; /* Standard text size for readability */
-    line-height: 1.6;
+    line-height: 1.6; /* Adjusted line height for better readability */
     letter-spacing: 0.15px;
     margin: 0;
     padding-top: 60px; /* Space for fixed navbar */
@@ -62,7 +63,44 @@ nav ul li a.active {
     padding: auto;
 }
 
+/* 1.3 - Sidebar */
+.sidebar {
+    width: 200px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 20px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
 /* Chapter 2: Content Display - Important for Usability */
+
 /* 2.1 - Section Styling */
 section {
     width: 40%; /* Adjusted width for better focus on content */
@@ -73,22 +111,26 @@ section {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-section h2, section p {
+section h2,
+section h3 {
     color: #333; /* Consistent text color */
-    margin-bottom: 10px; /* Space below headings */
+    margin-top: 24px; /* Adds space before headings */
+    margin-bottom: 8px; /* Adds space after headings */
 }
 
 section p {
     color: #444;
     font-size: 16px; /* Legible text size */
-    line-height: 1.6;
+    line-height: 1.6; /* Adjusted line height for better readability */
+    margin-top: 8px; /* Adds space before paragraphs */
+    margin-bottom: 16px; /* Adds space after paragraphs */
 }
 
 /* 2.2 - Cookie Consent Popup */
 .cookie-consent {
     position: fixed;
     bottom: 0px;
-    left: 50%;   
+    left: 50%;
     transform: translateX(-50%);
     width: 100%;
     background-color: rgba(248, 249, 250, 0.95);
@@ -113,13 +155,6 @@ section p {
     flex-grow: 1;
 }    
 
-/*
-.cookie-consent a {
-    color: none !important; 
-    text-decoration: none;
-    }
-*/
-
 .cookie-consent button {
     background-color: #875EC7;
     color: white;
@@ -135,7 +170,6 @@ section p {
 }
 
 /* 2.3 - Images */
-
 .image-container {
     max-width: 90%;
     overflow: hidden;
@@ -144,7 +178,6 @@ section p {
 }
 
 img {
-    
     max-width: 100%;
     height: auto;
     display: block;
@@ -169,20 +202,19 @@ nav ul li a:hover {
 }
 
 /* Point form or Lists */
-
 ul li {
     margin-bottom: 5px;
     color: #666; /* Keep this off or at 0 px, as it messes up the nav menu which is also a list */
 }
 
 /* Add spacing to lists in content sections which we tag as content-list, which allows us to keep other lists as they are. */
-
 .content-list li {
     margin-bottom: 15px;
     color: #666;    
 }
 
 /* Chapter 3: Auxiliary Styles - Enhancing Aesthetics */
+
 /* 3.1 - Buttons and Links */
 .button, button {
     background-color: #4CAF50; /* Green for visibility */
@@ -215,11 +247,9 @@ th {
 }
 
 /* 3.3 - Hidden */
-
 .hidden {
     display: none !important;
 }
-
 
 /* Chapter 4: Responsive Design - Ensuring Accessibility on Mobile Devices */
 @media (max-width: 700px) {
@@ -248,4 +278,3 @@ footer {
     height: auto;
     padding: 10px 0;
 }
-

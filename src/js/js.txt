@@ -1,0 +1,47 @@
+Modular:
+
+/src
+  ├── js
+  │   ├── components
+  │   │   ├── navbar.js
+  │   │   ├── footer.js
+  │   │   └── modal.js
+  │   ├── utils
+  │   │   ├── helpers.js
+  │   │   └── validators.js
+  │   ├── services
+  │   │   ├── api.js
+  │   │   └── auth.js
+  │   ├── config
+  │   │   └── config.js
+  │   ├── events
+  │   │   └── eventHandlers.js
+  │   ├── main.js
+  │   └── app.js
+  ├── css
+  │   ├── main.css
+  │   ├── theme.css
+  │   └── responsive.css
+  ├── images
+  ├── fonts
+.gitignore
+
+Simple:
+ 
+/src
+  ├── js
+  │   ├── main.js
+  │   ├── analytics.js
+  │   ├── eventHandlers.js
+  │   ├── domManipulations.js
+  │   ├── routing.js
+  │   ├── helpers.js
+  │   ├── constants.js
+  │   └── cookies.js
+  ├── css
+  │   ├── main.css
+  │   ├── theme.css
+  │   └── responsive.css
+  ├── images
+  ├── fonts
+.gitignore

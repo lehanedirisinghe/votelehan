@@ -1,0 +1,24 @@
+import os
+import re
+
+# Define the directory where the files are located
+directory = '/Users/lehan/Desktop/page sound'  # Update this to your directory path
+
+# Define the regex pattern to match numbers and unnecessary parts
+pattern = re.compile(r'mixkit-(.*?)-\d+\.mp3')
+
+# Change to the specified directory
+os.chdir(directory)
+
+# Iterate over the files in the directory
+for filename in os.listdir(directory):
+    if filename.endswith('.mp3'):
+        # Use regex to find the new filename
+        match = pattern.match(filename)
+        if match:
+            new_filename = match.group(1) + '.mp3'
+            # Rename the file
+            os.rename(filename, new_filename)
+            print(f'Renamed: {filename} -> {new_filename}')
+
+print('Renaming completed.')
