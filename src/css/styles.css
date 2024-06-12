@@ -14,6 +14,19 @@ body {
     background-color: #f0f0f0; /* Soft purple background for a light theme */
 }
 
+
+
+.problem {
+    color: rgb(205, 28, 1); /* Change this to your desired color */
+    font-weight: normal;
+}
+
+.solution {
+    color: rgb(21, 66, 214); /* Change this to your desired color */
+    font-weight: normal;
+}
+
+
 /* 1.2 - Navigation Menu */
 nav {
     background-color: rgba(240, 240, 240, 0.9); /* Purple background for distinct appearance */
