@@ -5,19 +5,20 @@
 /* 1.1 - General Styles for Body */
 body {
     font-family: 'Roboto', Arial, sans-serif; /* Uniform font for better readability */
-    color: #333;
+    color: #444;
     font-size: 16px; /* Standard text size for readability */
     line-height: 1.6; /* Adjusted line height for better readability */
     letter-spacing: 0.15px;
     margin: 0;
-    padding-top: 60px; /* Space for fixed navbar */
-    background-color: #f3effa; /* Soft purple background for a light theme */
+    padding-top: 35px; /* Space for fixed navbar */
+    background-color: #f0f0f0; /* Soft purple background for a light theme */
 }
 
 /* 1.2 - Navigation Menu */
 nav {
-    background-color: #875EC7; /* Purple background for distinct appearance */
-    color: #fff; /* White text for contrast */
+    background-color: rgba(240, 240, 240, 0.9); /* Purple background for distinct appearance */
+    color: #444; /* White text for contrast */
+    margin: 0px;
     padding: 0px 0px;
     position: fixed; /* Fixed at the top */
     width: 100%; /* Full width */
@@ -36,37 +37,74 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 20px; /* Space between items */
+    margin: 0;
+    padding: 0px 0px;
+    margin-right: 8px; /* Space between items */
+}
+
+nav ul.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: 2px solid #673AB7;
+    padding: 5px;
+    color: #673AB7;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+@media (max-width: 700px) {
+    .hamburger {
+        display: block;
+    }
+    nav ul {
+        display: none;
+    }
+    nav ul.active {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li {
+        width: 100%;
+        margin: 0;
+    }
 }
 
 nav ul li a {
-    color: #fff;
+    color: #555;
     width: auto;
     text-decoration: none;
     padding: 7px 8px;
     display: inline-block;
     text-align: center;
-    transition: font-weight 0.25s, background-color 0.25s;
 }
 
 nav ul li a:hover {
-    background-color: #582aa6; /* Darker purple on hover/active */
-    font-weight: normal;
-    color: #fff;
+    background-color: #875EC7; /* Darker purple on hover/active */
+    color: #fafafa;
     padding: 7px 8px;
 }
 
 nav ul li a.active {
-    background-color: #582aa6;
+    background-color: #673AB7;
     font-weight: bold;
-    color: #fff;
-    padding: auto;
+    color: #fafafa;
+    padding: 7px 8px;
 }
 
 /* 1.3 - Sidebar */
 .sidebar {
     width: 200px;
-    background-color: #f4f4f4;
+    background-color: #fafafa;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -106,20 +144,20 @@ section {
     width: 40%; /* Adjusted width for better focus on content */
     margin: 30px auto; /* Centering sections */
     padding: 20px 30px;
-    background-color: #ffffff;
+    background-color: #fafafa;
     border-radius: 8px; /* Rounded corners for modern look */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 section h2,
 section h3 {
-    color: #333; /* Consistent text color */
+    color: #555; /* Consistent text color */
     margin-top: 24px; /* Adds space before headings */
     margin-bottom: 8px; /* Adds space after headings */
 }
 
 section p {
-    color: #444;
+    color: #666;
     font-size: 16px; /* Legible text size */
     line-height: 1.6; /* Adjusted line height for better readability */
     margin-top: 8px; /* Adds space before paragraphs */
@@ -151,7 +189,7 @@ section p {
 
 .cookie-consent p {
     margin: 10px;
-    font-size: 14px;
+    font-size: 16px;
     flex-grow: 1;
 }    
 
@@ -174,7 +212,7 @@ section p {
     max-width: 90%;
     overflow: hidden;
     display: flex;
-    justify-content: center;
+    justify-content: centler;
 }
 
 img {
@@ -190,9 +228,14 @@ a {
 }
 
 a:hover {
-    color: #1827a7; /* Slightly darker blue for hover state */
+    color: #009e12; /* Slightly darker blue for hover state */
     text-decoration: underline;
-    font-weight: bold;
+    font-weight: none;
+}
+
+/* Visited state, excluding .main-nav links */
+a:not(.main-nav):visited {
+    color: #006a0c; /* Orange color for visited links */
 }
 
 /* To ensure global styles don't affect nav links */
@@ -217,7 +260,7 @@ ul li {
 
 /* 3.1 - Buttons and Links */
 .button, button {
-    background-color: #4CAF50; /* Green for visibility */
+    background-color: #673AB7; /* Green for visibility */
     color: white;
     padding: 10px 20px;
     border: none;
@@ -227,23 +270,26 @@ ul li {
 }
 
 .button:hover, button:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #875EC7; /* Darker green on hover */
 }
 
 /* 3.2 - Tables for Structured Data */
+
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 20px;
 }
-
 th, td {
-    border: 1px solid #ddd;
-    padding: 10px;
+    padding: 15px;
     text-align: left;
+    border-bottom: 1px solid #ddd;
 }
-
 th {
-    background-color: #f4f4f4; /* Light grey for headers */
+    background-color: #f2f2f2;
+}
+tr:hover {
+    background-color: #f5f5f5;
 }
 
 /* 3.3 - Hidden */
@@ -268,13 +314,71 @@ th {
     }
 }
 
-/* Chapter 5: Footer Styles - Consistency at the Page Bottom */
+/* Footer Styles */
 footer {
-    background: #f3effa;
-    color: #333;
+    background: #f0f0f0;
+    color: #444;
     text-align: center;
     position: static;
-    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
     height: auto;
-    padding: 10px 0;
+    padding: 10px 20px 70px 20px; /* Adjusted vertical padding */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    margin: 5px 10px; /* Reduced margin for less spacing */
+    flex: 1;
+    min-width: 200px;
+    max-width: 400px;
+}
+
+.footer-section h2 {
+    font-size: 26px;
+    margin-bottom: 5px; /* Reduced bottom margin for heading */
+}
+
+.footer-section p {
+    margin: 5px 0; /* Reduced margin for paragraphs */
+}
+
+.footer-section a {
+    color: #0014f4;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+    color: #009e12;
+}
+
+
+/* Chapter 6: Scroll to Top Button Styles - Ensuring Accessibility on Mobile Devices */
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #444;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    z-index: 1000;
+}
+
+.scroll-to-top:hover {
+    background-color: #333;
+    color: #fff;
 }

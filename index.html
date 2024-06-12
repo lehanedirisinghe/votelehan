@@ -5,80 +5,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vote Lehan</title>
+    <meta name="description" content="Vote Lehan for a developed Sri Lanka. Learn policies, stories and partner in this quick 5-minute summary.">
 
-    <link rel="icon" href="/src/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/src/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <!-- Content Security Policy for testing; unsafe inline script allowed for now as it is otherwise buggy on some test devices -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; report-uri https://votelehan.report-uri.com/r/d/csp/reportOnly;">
 
+    <!-- Update this, with HTAccess on apache, test, then use or stop-->
+    <meta http-equiv="Report-To" content="{&quot;group&quot;:&quot;csp-endpoint&quot;,&quot;max_age&quot;:10886400,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://votelehan.report-uri.com/a/d/g&quot;}],&quot;include_subdomains&quot;:true}">
+    <meta http-equiv="NEL" content="{&quot;report_to&quot;:&quot;csp-endpoint&quot;,&quot;max_age&quot;:10886400,&quot;include_subdomains&quot;:true,&quot;success_fraction&quot;:0,&quot;failure_fraction&quot;:0.1}">
+    
+    <!-- X-Content-Type-Options to prevent MIME type sniffing -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <!-- Referrer-Policy to control the information sent in the Referer header -->
+    <meta name="referrer" content="no-referrer">
+
+    <!-- Privacy protections to visitors -->
+    <meta http-equiv="Permissions-Policy" content="geolocation=(self), microphone=(), camera=(), gyroscope=(), magnetometer=(), usb=(), midi=(), accelerometer=(), autoplay=(self), fullscreen=(self)">
+
+    <!-- X-Frame-Options to prevent clickjacking -->
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <!-- Strict-Transport-Security to enforce secure (HTTPS) connections to the server -->
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+
+    <!-- DNS Prefetch for external domains -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+
+    <!-- Preconnect to speed up connection setup -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    </noscript>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="/src/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
         <link rel="stylesheet" href="/src/css/styles.css">
     </noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <!-- Favicon links -->
+    <link rel="icon" href="/src/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/src/images/favicon-32x32.png" sizes="32x32" type="image/png">
 </head>
 
-<body>
 
+<body>
     <header>
         <nav>
+            <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
             <ul id="menu">
-                <li><a href="/index.html">Vote Lehan</a></li>
-                <li><a href="/policy.html">Policy</a></li>
-                <li><a href="/economy.html">Economy</a></li>
-                <li><a href="/social.html">Social</a></li>
-                <li><a href="/story.html">Story</a></li>
-                <li><a href="/partner.html">Partner</a></li>
+                <li><a href="/index.html" class="main-nav">Vote Lehan</a></li>
+                <li><a href="/policy.html" class="main-nav">Policy</a></li>
+                <li><a href="/economy.html" class="main-nav">Economy</a></li>
+                <li><a href="/social.html" class="main-nav">Social</a></li>
+                <li><a href="/story.html" class="main-nav">Story</a></li>
+                <li><a href="/partner.html" class="main-nav">Partner</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-
         <section id="votelehan.com">
             <h1>VoteLehan.com </h1>
             <p>Hi, I'm Lehan. You found my vision for a developed Sri Lanka.</p>
+            <p>You are reading 
+
+                <select id="language-selector" class="language selector">                    
+                    <option value="en" selected>English</option>
+                    <option value="si">Sinhalese</option>
+                    <option value="ta">Tamil</option></select>. 
+                
+                මම මගේ භාෂාවට ආදරෙයි. பெருமையுடன் தேர்ந்தெடுங்கள். </p>
+            <p>I explain all we will do in this easy 5-minute summary:</p>
             <div class="image-container">
                 <img src="/src/images/lehan.png" alt="Lehan" loading="lazy">
             </div>
-            <p>I outline all I plan to do in this simple 5-minute summary:</p>
         </section>
-
+        
         <section id="problems-summary">
             <h2>Problems</h2>
             <p>These are the problems I'm solving:</p>
-
             <ul class="content-list">
                 <li><a href="/problems/bad-leaders.html">Bad Leaders</a>: It hurts to accept responsibility, for collective mistakes when selecting from a few horrid decision makers. It's time to finally break free from this cycle of hell.</li>
                 <li><a href="/problems/hostile-countries.html">Hostile Countries</a>: Pariah states control the regional neighborhood, picking incapable leaders to rule us by proxy. Your vote means we rise up to win back our island.</li>
-                <li><a href="/problems/evil-racketeers.html">Evil Racketeers</a>: Big profits in Sri Lanka's failure, have ensured the collapse of our people. All my designs intend to grow our fortunes.
-                </li>
+                <li><a href="/problems/evil-racketeers.html">Evil Racketeers</a>: Big profits in Sri Lanka's failure, ensured our people's collapse. All my designs grow our fortunes.</li>
                 <li><a href="/problems/fake-buddhist.html">Fake Buddhist</a>: A faith system designed to make people free of suffering, twisted to justify misery. Many prayers will soon be answered when we wake up.</li>
                 <li><a href="/problems/weak-courts.html">Weak Courts</a>: Corruption, theft, everywhere. No court cases to be done any time soon. How about we reach Denmark's court benchmark?</li>
-                <li><a href="/problems/low-standards.html">Low Standards</a>:  From food, to education, to health,the poverty trap hits us all. We're sick of compromising. We believe you will do what's best from a position of strength, comfort and ease.</li>
-                <li><a href="/problems/beggar-nation.html">Beggar Nation</a>:   From $1 = Rs 3.77 to Rs 300: We have tumbled downhill over the last 70 years to poverty. It's time to start acting like a republic, not an unsightly failure. </li>
-                <li><a href="/problems/dying-sinhalese.html">Dying Sinhalese</a>: Every failure contributes to the systematic replacement of our Sinhalese. It's time to give our people life.</li>
-                </ul>
-            
+                <li><a href="/problems/low-standards.html">Low Standards</a>: From food, to education, to health, the poverty trap hits us all. We're sick of compromising. We believe you will do what's best from a position of strength, comfort and ease.</li>
+                <li><a href="/problems/beggar-nation.html">Beggar Nation</a>: From $1 = Rs 3.77 to Rs 300: We have tumbled downhill over the last 70 years to poverty. It's time to start acting like a republic, not an unsightly failure.</li>
+                <li><a href="/problems/dying-sinhalese.html">Dying Sinhalese</a>: Disaster status despite paying $ billions in taxes. Every failure contributes to the systematic replacement of our Sinhalese. It's time to give our people life.</li>
+            </ul>
         </section>
 
         <section id="policy-summary">
             <h2>Policy</h2>
             <p>These are my key policies:</p>
             <ul>
-                <li>1. President</li>
-                <li>2. Prime Minister</li>
-                <li>3. Speaker</li>
-                <li>4. Finance</li>
-                <li>5. Foreign</li>
-                <li>6. Law</li>
-                <li>7. Home</li>
-                <li>8. Defense</li>
+                <li><a href="/policy/president.html">1. President</a>: I rep our SLFT with my vision for our future, with transparency we realize gains.</li>
+                <li><a href="/policy/p.html">2. Prime Minister</a>: Directs economy departments. Investing SLWF (25%) + SL Treasury Reserves (20%)! </li>
+                <li><a href="/policy/speaker.html">3. Speaker</a>: Making sure our people's requests earn a direct response.</li>
+                <li><a href="/policy/finance.html">4. Finance</a>: My PM focuses on our economy. Making money!</li>
+                <li><a href="/policy/foreign.html">5. Foreign</a>: I rep SLFT with vision for our expert departments, we openly realize these to create SLWF gains.</li>
+                <li><a href="/policy/law.html">6. Law</a>: I rep SLFT with vision for our expert departments, we openly realize these to create SLWF gains.</li>
+                <li><a href="/policy/home.html">7. Home</a>: I rep SLFT with vision for our expert departments, we openly realize these to create SLWF gains.</li>
+                <li><a href="/policy/defense.html">8. Defense</a>: I rep SLFT with vision for our expert departments, we openly realize these to create SLWF gains.</li>
             </ul>
         </section>
 
@@ -99,14 +130,14 @@
 
         <section id="social-summary">
             <h2>Social</h2>
-            <p>My dreams to improving society:</p>
+            <p>My action aiming to improve society:</p>
             <ul>
                 <li>17. President’s Office</li>
                 <li>18. Media</li>
                 <li>19. Education</li>
                 <li>20. Health</li>
                 <li>21. Food</li>
-                <li>22. Sports</li>
+                <li>22. Fun</li>
                 <li>23. Buddhist</li>
                 <li>24. Women’s</li>
             </ul>
@@ -114,46 +145,58 @@
 
         <section id="story-summary">
             <h2>Story</h2>
-            <p>We budget for growth with a simple tax system. I'll show you how $12 to 20 billion we collect every year,
-                from 2025 to 2030 will pay for development visibly.</p>
-
+            <p>Here's our fun story for you to write:</p>
             <ul class="content-list">
-                <li><a href="/story/history.html">History</a>: This is my take on our history as a people. I share my glimpses into what the ideal future holds. </li>
-                <li><a href="/story/lehan.html">Lehan</a>: My personal story, and all about me. In case you haven't read my best-selling diary. </li>
-                <li><a href="/story/world.html">World</a>: I share insights on foreign countries. I cherry-picked policies for us which work for them. </li>
-                <li><a href="/story/map.html">Map</a>: A map of SL, to showcase, our vibrant people. This helps to share how we approach districts constructively. </li>
-                <li><a href="/story/military.html">Military</a>: I share my reasons to justify early decisions on equipment, conscription, training, armory and strategy. </li>
-                <li><a href="/story/law.html">Law</a>: Updated nordic law codes, principles and systems, with internet polling rulings, with a new constitution, Singapore speeds, American breath and British depth. </li>
-                <li><a href="/story/mnc.html">MNC</a>: MNC-led growth in Asia works miracles. We share 30% with MNCs, 45% with our people and 25% as gov't. </li>
-                <li><a href="/story/wealth.html">Wealth</a>: All will be owned by SLWF investors. We protect our bottom SLFT for a profit powerhouse, pyramid wonder. </li>
+                <li><a href="/story/history.html">History</a>: My take on our history, present times and an ideal future.</li>
+                <li><a href="/story/lehan.html">Lehan</a>: All about me. What shapes my character.</li>
+                <li><a href="/story/world.html">World</a>: Way I see every country; cherry-picking their best ideas.</li>
+                <li><a href="/story/map.html">Map</a>: Showcase our peoples, and how we approach every district.</li>
+                <li><a href="/story/military.html">Military</a>: Early decisions on train, arm and defend our people.</li>
+                <li><a href="/story/law.html">Law</a>: Updating with nordic law codes, poll rulings, a new constitution.</li>
+                <li><a href="/story/mnc.html">MNC</a>: MNC-led profits split: MNCs 30%, our people 45% and SL 25%.</li>
+                <li><a href="/story/wealth.html">Wealth</a>: SLFT own all with SLWF: profit powerhouse wonder.</li>
             </ul>
         </section>
 
         <section id="partner-summary">
             <h2>Partner</h2>
-            <p>Let's work together to develop SL:</p>
+            <p>Ways to collaborate to develop SL:</p>
             <ul class="content-list">
-                <li><a href="/partner/following.html">Following</a>: We have loyal friends, supporters and advisors. They lead our community to demand positive change.</li>
-                <li><a href="/partner/lobby.html">Lobby</a>: There is a good, solid business-case for us. Employers require access to courts, funding, land, technology and people. We provide all of these very competitively.</li>
-                <li><a href="/partner/voters.html">Voters</a>: These are our registered voters, who help influence us. You can hear why they support us.</li>
-                <li><a href="/partner/teach.html">Teach</a>: You can teach people to demand better, so we are able to ask for more in a smart way.</li>
-                <li><a href="/partner/invest.html">Invest</a>: SL Wealth Fund is a great way to do business. This is an easy way for enterprises to gain early access.</li>
-                <li><a href="/partner/family.html">Family</a>: We use genetics-based SL Family Tree to make sure to include our Sinhalese, Tamils, and minorities.</li>
-                <li><a href="/partner/games.html">Games</a>: Here are some cool games to try playing while on our site.</li>
-                <li><a href="/partner/connect.html">Connect</a>: You can use this page to connect with us.</li>
+                <li><a href="/partner/following.html">Following</a>: Loyal friends direct and support our community.</li>
+                <li><a href="/partner/lobby.html">Lobby</a>: Our solid business-case invites support.</li>
+                <li><a href="/partner/voters.html">Voters</a>: You can hear why our registered voters support us.</li>
+                <li><a href="/partner/contribute.html">Contribute</a>: War chest for SL filled with sales honoring partners.</li>
+                <li><a href="/partner/invest.html">Invest</a>: Easy way for enterprises to gain SLWF early access.</li>
+                <li><a href="/partner/family.html">Family</a>: Genetics-based SL Family Tree to keep us great.</li>
+                <li><a href="/partner/games.html">Games</a>: Few cool games to play while on our site.</li>
+                <li><a href="/partner/connect.html">Connect</a>: Use this contact page to connect with us.</li>
             </ul>
         </section>
-
     </main>
-<footer>
+
+    <footer>
         <div id="cookie-consent" class="cookie-consent">
-                <p>We use cookies to improve your experience based on <a href="/terms.html">Terms</a>.
-                    <button id="cookie-accept">Okay, that's fine!</button>
-                </p>
+            <p>Save cookies detailed in <a href="/terms.html">Terms</a> to load fully?
+                <button id="cookie-accept">Yes, I accept!</button>
+            </p>
         </div>
-</footer>
-        
-    <script type="module" src="/src/js/javascript.js" defer></script>
-    </body>
-        
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>Let's Develop Sri Lanka!</h2>
+                <p>Proudly buy a name for life as a Partner:</p>
+                <p><a href="/fund.html">Fund Now: $5</a></p>
+                <p>Vote Lehan &copy; <span id="currentYear"></span></p>
+                <p>
+                    <a href="/terms.html">Terms</a>
+                    <a href="/src/layout.html">Site Layout</a> 
+                    <a href="#top">Back to Top ↑</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <script type="module" src="src/js/javascript.js" defer></script>
+
+</body>
+
 </html>

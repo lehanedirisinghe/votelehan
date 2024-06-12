@@ -4,25 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Low Standards</title>
+    <title>Vote Lehan</title>
+    <meta name="description" content="Vote Lehan for a developed Sri Lanka. Learn policies, stories and partner in this quick 5-minute summary.">
 
-    <link rel="icon" href="/src/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/src/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <!-- Content Security Policy for testing; unsafe inline script allowed for now as it is otherwise buggy on some test devices -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; report-uri https://votelehan.report-uri.com/r/d/csp/reportOnly;">
 
+    <!-- Update this, with HTAccess on apache, test, then use or stop-->
+    <meta http-equiv="Report-To" content="{&quot;group&quot;:&quot;csp-endpoint&quot;,&quot;max_age&quot;:10886400,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://votelehan.report-uri.com/a/d/g&quot;}],&quot;include_subdomains&quot;:true}">
+    <meta http-equiv="NEL" content="{&quot;report_to&quot;:&quot;csp-endpoint&quot;,&quot;max_age&quot;:10886400,&quot;include_subdomains&quot;:true,&quot;success_fraction&quot;:0,&quot;failure_fraction&quot;:0.1}">
+    
+    <!-- X-Content-Type-Options to prevent MIME type sniffing -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <!-- Referrer-Policy to control the information sent in the Referer header -->
+    <meta name="referrer" content="no-referrer">
+
+    <!-- Privacy protections to visitors -->
+    <meta http-equiv="Permissions-Policy" content="geolocation=(self), microphone=(), camera=(), gyroscope=(), magnetometer=(), usb=(), midi=(), accelerometer=(), autoplay=(self), fullscreen=(self)">
+
+    <!-- X-Frame-Options to prevent clickjacking -->
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <!-- Strict-Transport-Security to enforce secure (HTTPS) connections to the server -->
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+
+    <!-- DNS Prefetch for external domains -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+
+    <!-- Preconnect to speed up connection setup -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    </noscript>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="/src/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
         <link rel="stylesheet" href="/src/css/styles.css">
     </noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-</head>
 
+    <!-- Favicon links -->
+    <link rel="icon" href="/src/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/src/images/favicon-32x32.png" sizes="32x32" type="image/png">
+</head>
 <body>
 
 <header>
@@ -41,7 +66,7 @@
     <main>
 
         <section id="low-standards-intro">
-            <h1>Low Standards in Sri Lanka</h1>
+            <h1>Low Standards</h1>
         
             <h2>Low IQ and Its Implications</h2>
             <p>Sri Lanka's average IQ is 78, a troubling statistic that impacts our nation's progress. Our people struggle with math and language skills, particularly English. There's a difficulty with pattern recognition, which is linked to genetic dyscalculia. This low intelligence level hampers our ability to think strategically and solve problems.</p>
@@ -72,13 +97,27 @@
     </main>
     <footer>
         <div id="cookie-consent" class="cookie-consent">
-                <p>We use cookies to improve your experience based on <a href="/terms.html">Terms</a>.
-                    <button id="cookie-accept">Okay, that's fine!</button>
+            <p>Save cookies detailed in <a href="/terms.html">Terms</a> to load fully?
+                <button id="cookie-accept">Yes, I accept!</button>
+            </p>
+        </div>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>Let's Develop Sri Lanka!</h2>
+                <p>Proudly buy a name for life as a Partner:</p>
+                <p><a href="/fund.html">Fund Now: $5</a></p>
+                <p>Vote Lehan &copy; <span id="currentYear"></span></p>
+                <p>
+                    <a href="/terms.html">Terms</a>
+                    <a href="/src/layout.html">Site Layout</a> 
+                    <a href="#top">Back to Top ↑</a>
                 </p>
+            </div>
         </div>
     </footer>
-        
-    <script src="/src/js/javascript.js" defer></script>
+    
+    <script type="module" src="src/js/javascript.js" defer></script>
+
 </body>
-        
+
 </html>

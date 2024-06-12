@@ -86,3 +86,11 @@ RewriteRule \.(jpg|jpeg|png|gif)$ - [F,NC]
 # Custom 403 Forbidden error page
 
 ErrorDocument 403 /403.html
+
+# Report-To + NEL setup for apache server
+
+<IfModule mod_headers.c>
+    Header set Report-To '{"group":"default","max_age":31536000,"endpoints":[{"url":"https://votelehan.report-uri.com/a/d/g"}],"include_subdomains":true}'
+    Header set NEL '{"report_to":"default","max_age":31536000,"include_subdomains":true}'
+</IfModule>
+
