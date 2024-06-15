@@ -1,29 +1,17 @@
 // path: /src/sound-handler.ts
-
 (function () {
     'use strict';
-
     // 1. Initialize sound playback only after user interaction
-    let userInteracted: boolean = false;
-
-    function enableSoundPlayback(): void {
+    var userInteracted = false;
+    function enableSoundPlayback() {
         userInteracted = true;
     }
-
     // 2. Add event listeners for user interactions
     document.addEventListener('click', enableSoundPlayback);
     document.addEventListener('keydown', enableSoundPlayback);
-
     // 3. Declare soundGroups only once
-    const soundDir: string = '/src/sound/';
-    interface SoundGroups {
-        submit: string[];
-        open: string[];
-        navigate: string[];
-        toggle: string[];
-        achieve: string[];
-    }
-    const soundGroups: SoundGroups = {
+    var soundDir = '/src/sound/';
+    var soundGroups = {
         submit: [
             'submit/classic-camera-click.mp3',
             'submit/camera-shutter-hard-click.mp3',
@@ -58,70 +46,62 @@
             'achieve/bonus-collect-award.mp3'
         ]
     };
-
     // 4. Function to get a random sound file from a specific group
-    function getRandomSound(group: keyof SoundGroups): HTMLAudioElement {
-        const soundFiles: string[] = soundGroups[group];
-        const randomIndex: number = Math.floor(Math.random() * soundFiles.length);
-        const audio: HTMLAudioElement = new Audio(soundDir + soundFiles[randomIndex]);
+    function getRandomSound(group) {
+        var soundFiles = soundGroups[group];
+        var randomIndex = Math.floor(Math.random() * soundFiles.length);
+        var audio = new Audio(soundDir + soundFiles[randomIndex]);
         audio.volume = 0.5; // Set volume to 50%
         return audio;
     }
-
     // 5. Play a sound when the page loads
-    function playPageLoadSound(): void {
-        const sound: HTMLAudioElement = getRandomSound('open');
+    function playPageLoadSound() {
+        var sound = getRandomSound('open');
         sound.volume = 0.5; // Set volume to 50%
-        sound.play().catch(error => console.log('Audio playback failed:', error));
+        sound.play().catch(function (error) { return console.log('Audio playback failed:', error); });
     }
-
     // 6. Add event listener for the Back to Top button
-    const backToTopButton: HTMLAnchorElement | null = document.querySelector('a[href="#top"]');
+    var backToTopButton = document.querySelector('a[href="#top"]');
     if (backToTopButton) {
-        backToTopButton.addEventListener('click', () => {
+        backToTopButton.addEventListener('click', function () {
             if (userInteracted) {
-                const sound: HTMLAudioElement = getRandomSound('navigate');
-                sound.play().catch(error => console.log('Audio playback failed:', error));
+                var sound = getRandomSound('navigate');
+                sound.play().catch(function (error) { return console.log('Audio playback failed:', error); });
             }
         });
     }
-
     // 7. Add event listener for image clicks
-    const imageElement: HTMLImageElement | null = document.querySelector('img'); // Adjust the selector as needed
+    var imageElement = document.querySelector('img'); // Adjust the selector as needed
     if (imageElement) {
-        imageElement.addEventListener('click', () => {
+        imageElement.addEventListener('click', function () {
             if (userInteracted) {
-                const sound: HTMLAudioElement = getRandomSound('submit');
-                sound.play().catch(error => console.log('Audio playback failed:', error));
+                var sound = getRandomSound('submit');
+                sound.play().catch(function (error) { return console.log('Audio playback failed:', error); });
             }
         });
     }
-
     // 8. Add sound effect for language selector
-    const languageSelectElement: HTMLSelectElement | null = document.querySelector('.language-selector') as HTMLSelectElement | null;
+    var languageSelectElement = document.querySelector('.language-selector');
     if (languageSelectElement) {
-        languageSelectElement.addEventListener('change', () => {
+        languageSelectElement.addEventListener('change', function () {
             if (userInteracted) {
-                const sound: HTMLAudioElement = getRandomSound('toggle');
-                sound.play().catch(error => console.log('Audio playback failed:', error));
+                var sound = getRandomSound('toggle');
+                sound.play().catch(function (error) { return console.log('Audio playback failed:', error); });
             }
         });
     }
-
     // Warning: the toggle language selector is working, but the sound is not playing
     // We will study it later
-
     // 9. Event functions to play a random sound from a specified group
-    function addSoundEventListener(selector: string, event: string, group: keyof SoundGroups): void {
-        document.querySelectorAll<HTMLElement>(selector).forEach(element => {
-            element.addEventListener(event, () => {
-                const sound: HTMLAudioElement = getRandomSound(group);
+    function addSoundEventListener(selector, event, group) {
+        document.querySelectorAll(selector).forEach(function (element) {
+            element.addEventListener(event, function () {
+                var sound = getRandomSound(group);
                 sound.volume = 0.5; // Set volume to 50%
-                sound.play().catch(error => console.log('Audio playback failed:', error));
+                sound.play().catch(function (error) { return console.log('Audio playback failed:', error); });
             });
         });
     }
-
     // 10. Your existing code:
     document.addEventListener('DOMContentLoaded', function () {
         console.log('DOM fully loaded and parsed');
@@ -129,36 +109,33 @@
         initializeNonCriticalComponents();
         playPageLoadSound(); // Ensure sound plays on page load
     });
-
     // 11. Initialize the Intersection Observer
-    const observerOptions: IntersectionObserverInit = {
+    var observerOptions = {
         root: null,
         rootMargin: '0px',
         threshold: 0.1
     };
-
-    const observer: IntersectionObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            const target = entry.target as HTMLElement;
+    var observer = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+            var target = entry.target;
             if (entry.isIntersecting) {
                 target.style.backgroundColor = 'rgba(0, 0, 0, 0)'; // Reveal
-            } else {
+            }
+            else {
                 target.style.backgroundColor = 'rgba(0, 0, 0, 0.9)'; // Cover
             }
         });
     }, observerOptions);
-
     // 12. Initialize critical components such as cookies consent and Google Analytics
-    function initializeCriticalComponents(): void {
+    function initializeCriticalComponents() {
         initializeCookiesConsent();
         initializeGoogleAnalytics();
     }
-
     // 13. Initialize the cookies consent functionality
-    function initializeCookiesConsent(): void {
-        const cookieConsentElement: HTMLElement | null = document.getElementById('cookie-consent');
-        const cookieAcceptButton: HTMLElement | null = document.getElementById('cookie-accept');
-
+    function initializeCookiesConsent() {
+        var _a;
+        var cookieConsentElement = document.getElementById('cookie-consent');
+        var cookieAcceptButton = document.getElementById('cookie-accept');
         // 14. Check if cookie consent elements exist
         if (!cookieConsentElement || !cookieAcceptButton) {
             console.error('Cookie consent elements not found');
@@ -166,118 +143,112 @@
         }
         try {
             // 15. Show cookie consent if not already accepted
-            if (getStorage()?.getItem('cookiesAccepted') === 'true') {
+            if (((_a = getStorage()) === null || _a === void 0 ? void 0 : _a.getItem('cookiesAccepted')) === 'true') {
                 console.log('Cookies already accepted, hiding banner');
                 cookieConsentElement.style.display = 'none';
-            } else {
+            }
+            else {
                 console.log('Showing cookie consent');
                 cookieConsentElement.style.display = 'block';
             }
-
             // 16. Add click event listener to the accept button
-            cookieAcceptButton.addEventListener('click', (event) => {
+            cookieAcceptButton.addEventListener('click', function (event) {
                 event.preventDefault();
                 acceptCookies();
-                const sound: HTMLAudioElement = getRandomSound('submit'); // Play sound on click
+                var sound = getRandomSound('submit'); // Play sound on click
                 sound.volume = 0.5; // Set volume to 50%
-                sound.play().catch(error => console.log('Audio playback failed:', error));
+                sound.play().catch(function (error) { return console.log('Audio playback failed:', error); });
             });
-        } catch (e) {
+        }
+        catch (e) {
             console.error('Storage not available', e);
         }
     }
-
     // 17. Handle the acceptance of cookies
-    function acceptCookies(): void {
+    function acceptCookies() {
+        var _a;
         try {
             // 18. Store acceptance in storage
-            getStorage()?.setItem('cookiesAccepted', 'true');
+            (_a = getStorage()) === null || _a === void 0 ? void 0 : _a.setItem('cookiesAccepted', 'true');
             console.log('Cookies accepted and stored in storage.');
-        } catch (e) {
+        }
+        catch (e) {
             console.error('Storage not available', e);
         }
-
-        const cookieConsentElement: HTMLElement | null = document.getElementById('cookie-consent');
-
+        var cookieConsentElement = document.getElementById('cookie-consent');
         // 19. Check if cookie consent element exists
         if (!cookieConsentElement) {
             console.error('Cookie consent element not found');
             return;
         }
-
         // 20. Hide the cookie consent element
         cookieConsentElement.style.display = 'none';
         console.log('Cookie consent element hidden.');
     }
-
     // 21. Function to determine available storage (localStorage, sessionStorage, or none)
-    function getStorage(): Storage | null {
+    function getStorage() {
         try {
             localStorage.setItem('test', 'test');
             localStorage.removeItem('test');
             return localStorage;
-        } catch (e) {
+        }
+        catch (e) {
             console.warn('LocalStorage not available, using SessionStorage.');
             try {
                 sessionStorage.setItem('test', 'test');
                 sessionStorage.removeItem('test');
                 return sessionStorage;
-            } catch (e) {
+            }
+            catch (e) {
                 console.error('Both LocalStorage and SessionStorage are not available.');
                 return null;
             }
         }
     }
-
     // 22. Initialize Google Analytics
-    function initializeGoogleAnalytics(): void {
-        if (!(window as any).dataLayer) {
-            (window as any).dataLayer = [];
+    function initializeGoogleAnalytics() {
+        if (!window.dataLayer) {
+            window.dataLayer = [];
         }
-
         // 23. Define gtag function to send data to Google Analytics
-        function gtag(...args: any[]): void {
-            (window as any).dataLayer.push(args);
+        function gtag() {
+            var args = [];
+            for (var _i = 0; _i < arguments.length; _i++) {
+                args[_i] = arguments[_i];
+            }
+            window.dataLayer.push(args);
         }
-
         // 24. Initialize Google Analytics with the provided ID
         gtag('js', new Date());
         gtag('config', 'GA_MEASUREMENT_ID');
         console.log('Google Analytics Initialized');
     }
-
     // 25. Initialize non-critical components such as user engagement tracking and event listeners
-    function initializeNonCriticalComponents(): void {
+    function initializeNonCriticalComponents() {
         initializeUserEngagementTracking();
         addEventListenersForNavigation();
         addEventListenersForButtons();
         playPageLoadSound(); // Play sound when the page loads
     }
-
     // 26. Initialize user engagement tracking
-    function initializeUserEngagementTracking(): void {
+    function initializeUserEngagementTracking() {
         console.log('User Engagement Tracking Initialized');
     }
-
     // 27. Add event listeners to navigation links to highlight the active link
-    function addEventListenersForNavigation(): void {
-        const links: NodeListOf<HTMLAnchorElement> = document.querySelectorAll('nav a');
-        let currentPath: string = window.location.pathname;
-
+    function addEventListenersForNavigation() {
+        var links = document.querySelectorAll('nav a');
+        var currentPath = window.location.pathname;
         console.log('Current Path:', currentPath); // Log current path
-
         // 28. Ensure the current path ends with a trailing slash
         if (!currentPath.endsWith('/')) {
             currentPath += '/';
         }
-
         // 29. Handle default paths and adjust accordingly
         if (currentPath === '/' || currentPath === '/votelehan.com/' || currentPath === '/terms.html/' || currentPath.startsWith('/problems/') || currentPath === '/127.0.0.1/') {
             currentPath = '/index.html/';
         }
-
         // 30. Define the six parent menu options
-        const parentMenuOptions: string[] = [
+        var parentMenuOptions = [
             '/home/',
             '/about/',
             '/services/',
@@ -285,138 +256,123 @@
             '/contact/',
             '/blog/'
         ];
-
         // 31. Loop through each navigation link
-        links.forEach(link => {
-            let linkPath: string = new URL(link.href).pathname;
-
+        links.forEach(function (link) {
+            var linkPath = new URL(link.href).pathname;
             console.log('Link Path:', linkPath); // Log each link path
-
             // 32. Ensure linkPath also ends with a trailing slash for consistency
             if (!linkPath.endsWith('/')) {
                 linkPath += '/';
             }
-
             console.log('Link Path:', linkPath);
-
             // 33. Add 'active' class to the current link and remove from others
             if (linkPath === currentPath) {
                 link.classList.add('active');
-                console.log(`Adding active class to: ${linkPath}`);
-                const soundGroup: keyof SoundGroups = parentMenuOptions.includes(linkPath) ? 'navigate' : 'open'; // Determine sound group
-                const sound: HTMLAudioElement = getRandomSound(soundGroup); // Play sound on navigation
+                console.log("Adding active class to: ".concat(linkPath));
+                var soundGroup = parentMenuOptions.includes(linkPath) ? 'navigate' : 'open'; // Determine sound group
+                var sound = getRandomSound(soundGroup); // Play sound on navigation
                 sound.volume = 0.5; // Set volume to 50%
-                sound.play().catch(error => console.log('Audio playback failed:', error));
-            } else {
+                sound.play().catch(function (error) { return console.log('Audio playback failed:', error); });
+            }
+            else {
                 link.classList.remove('active'); // Ensure only the relevant item is active
-                console.log(`Removing active class from: ${linkPath}`);
+                console.log("Removing active class from: ".concat(linkPath));
             }
         });
         console.log('Navigation Event Listeners Added');
     }
-
     // 34. Add event listeners to buttons to toggle visibility of sections
-    function addEventListenersForButtons(): void {
-        const toggleButtons: NodeListOf<HTMLButtonElement> = document.querySelectorAll('button[data-toggle]');
-
+    function addEventListenersForButtons() {
+        var toggleButtons = document.querySelectorAll('button[data-toggle]');
         // 35. Loop through each button with data-toggle attribute
-        toggleButtons.forEach(button => {
-            const targetId: string | null = button.getAttribute('data-toggle');
-            button.addEventListener('click', () => {
+        toggleButtons.forEach(function (button) {
+            var targetId = button.getAttribute('data-toggle');
+            button.addEventListener('click', function () {
                 if (targetId) {
                     toggleSection(targetId, button);
-                    const sound: HTMLAudioElement = getRandomSound('toggle'); // Play sound on click
+                    var sound = getRandomSound('toggle'); // Play sound on click
                     sound.volume = 0.5; // Set volume to 50%
-                    sound.play().catch(error => console.log('Audio playback failed:', error));
+                    sound.play().catch(function (error) { return console.log('Audio playback failed:', error); });
                 }
             });
-            console.log(`Event listener added for button with data-toggle="${targetId}"`);
+            console.log("Event listener added for button with data-toggle=\"".concat(targetId, "\""));
         });
-
         // 36. Additional event listeners for other buttons (e.g., accept buttons)
-        document.querySelectorAll<HTMLElement>('button.accept, form').forEach(element => {
-            element.addEventListener('click', (event) => {
-                const sound: HTMLAudioElement = getRandomSound('submit');
+        document.querySelectorAll('button.accept, form').forEach(function (element) {
+            element.addEventListener('click', function (event) {
+                var sound = getRandomSound('submit');
                 sound.volume = 0.5; // Set volume to 50%
-                sound.play().catch(error => console.log('Audio playback failed:', error));
+                sound.play().catch(function (error) { return console.log('Audio playback failed:', error); });
                 if (element.tagName.toLowerCase() === 'form') {
                     event.preventDefault();
-                    (element as HTMLFormElement).submit(); // Ensure the form is still submitted
+                    element.submit(); // Ensure the form is still submitted
                 }
             });
         });
-
         console.log('Button Event Listeners Added');
     }
-
     // 37. Function to toggle the visibility of a section
-    function toggleSection(sectionId: string, button: HTMLButtonElement): void {
-        const section: HTMLElement | null = document.getElementById(sectionId);
-
+    function toggleSection(sectionId, button) {
+        var section = document.getElementById(sectionId);
         // 38. Check if section element exists
         if (!section) {
-            console.error(`Element with id "${sectionId}" not found.`);
+            console.error("Element with id \"".concat(sectionId, "\" not found."));
             return;
         }
-
         // 39. Toggle the 'hidden' class on the section
         section.classList.toggle('hidden');
-
         // 40. Update the button text based on the section visibility
         if (section.classList.contains('hidden')) {
             button.textContent = 'Reveal more';
-        } else {
+        }
+        else {
             button.textContent = 'Hide this';
         }
-        console.log(`Toggled section with id="${sectionId}"`);
+        console.log("Toggled section with id=\"".concat(sectionId, "\""));
     }
-
     // 41. Hamburger menu functionality
-    const hamburger: HTMLElement | null = document.querySelector('.hamburger');
-    const menu: HTMLElement | null = document.querySelector('nav ul');
-
+    var hamburger = document.querySelector('.hamburger');
+    var menu = document.querySelector('nav ul');
     if (hamburger && menu) {
         hamburger.addEventListener('click', function () {
             hamburger.classList.toggle('active');
             menu.classList.toggle('active');
         });
-    } else {
+    }
+    else {
         console.error('Hamburger or menu element not found');
     }
-
     // 42. Language selector functionality
-    const languageSelector: HTMLSelectElement | null = document.getElementById('language-selector') as HTMLSelectElement | null;
+    var languageSelector = document.getElementById('language-selector');
     if (languageSelector) {
         languageSelector.addEventListener('change', changeLanguage);
-    } else {
+    }
+    else {
         console.error('Language selector element not found');
     }
-
-    function changeLanguage(): void {
-        const selectedLanguage: string = languageSelector?.value || '';
-        fetch(`/path/to/${selectedLanguage}.json`)
-            .then(response => response.json())
-            .then(data => updateContent(data))
-            .catch(error => console.error('Error loading language file:', error));
+    function changeLanguage() {
+        var selectedLanguage = (languageSelector === null || languageSelector === void 0 ? void 0 : languageSelector.value) || '';
+        fetch("/path/to/".concat(selectedLanguage, ".json"))
+            .then(function (response) { return response.json(); })
+            .then(function (data) { return updateContent(data); })
+            .catch(function (error) { return console.error('Error loading language file:', error); });
     }
-
-    function updateContent(data: any): void {
+    function updateContent(data) {
+        var _a;
         document.title = data.title;
-        document.querySelector('meta[name="description"]')?.setAttribute('content', data.description);
-        document.querySelector('nav a[href="/index.html"]')!.textContent = data.nav.home;
-        document.querySelector('nav a[href="/policy.html"]')!.textContent = data.nav.policy;
-        document.querySelector('nav a[href="/economy.html"]')!.textContent = data.nav.economy;
-        document.querySelector('nav a[href="/social.html"]')!.textContent = data.nav.social;
-        document.querySelector('nav a[href="/story.html"]')!.textContent = data.nav.story;
-        document.querySelector('nav a[href="/partner.html"]')!.textContent = data.nav.partner;
+        (_a = document.querySelector('meta[name="description"]')) === null || _a === void 0 ? void 0 : _a.setAttribute('content', data.description);
+        document.querySelector('nav a[href="/index.html"]').textContent = data.nav.home;
+        document.querySelector('nav a[href="/policy.html"]').textContent = data.nav.policy;
+        document.querySelector('nav a[href="/economy.html"]').textContent = data.nav.economy;
+        document.querySelector('nav a[href="/social.html"]').textContent = data.nav.social;
+        document.querySelector('nav a[href="/story.html"]').textContent = data.nav.story;
+        document.querySelector('nav a[href="/partner.html"]').textContent = data.nav.partner;
     }
-
     // 43. JavaScript to set the current year
     document.addEventListener('DOMContentLoaded', function () {
-        const currentYearElement: HTMLElement | null = document.getElementById('currentYear');
+        var currentYearElement = document.getElementById('currentYear');
         if (currentYearElement) {
             currentYearElement.textContent = new Date().getFullYear().toString();
         }
     });
-
 })();

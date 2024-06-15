@@ -1,45 +1,36 @@
 # Enable the rewrite engine
-
 RewriteEngine On
 
 # Redirect root URL to index.html
-
 RewriteRule ^$ /index.html [L]
 
 # Redirect non-www to www
-
 RewriteCond %{HTTP_HOST} !^www\.
-RewriteRule ^(.\*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
 
 # Redirect HTTP to HTTPS
-
 RewriteCond %{HTTPS} off
-RewriteRule ^(.\*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Custom 404 error page
-
 ErrorDocument 404 /404.html
 
 # Disable directory listing
-
 Options -Indexes
 
 # Protect .htaccess file
-
 <Files .htaccess>
 Order Allow,Deny
 Deny from all
 </Files>
 
 # Block access to sensitive files
-
-<FilesMatch "(^#.\*#|\.(bak|config|sql|fla|psd|ini|log|sh|inc|swp|dist|bak|old|tpl|txt|md|yml|yaml)$)">
+<FilesMatch "(^#.*#|\.(bak|config|sql|fla|psd|ini|log|sh|inc|swp|dist|bak|old|tpl|txt|md|yml|yaml)$)">
 Order Allow,Deny
 Deny from all
 </FilesMatch>
 
 # Set up cache control
-
 <IfModule mod_expires.c>
     ExpiresActive On
     ExpiresByType image/jpg "access plus 1 year"
@@ -55,7 +46,6 @@ Deny from all
 </IfModule>
 
 # Gzip compression
-
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/xml application/xhtml+xml application/rss+xml application/javascript application/x-javascript
     <IfModule mod_headers.c>
@@ -64,13 +54,11 @@ Deny from all
 </IfModule>
 
 # Cross-Origin Resource Sharing (CORS) settings
-
 <IfModule mod_headers.c>
     Header set Access-Control-Allow-Origin "*"
 </IfModule>
 
 # MIME types
-
 AddType application/font-woff2 .woff2
 AddType application/font-woff .woff
 AddType application/vnd.ms-fontobject .eot
@@ -78,19 +66,55 @@ AddType application/x-font-ttf .ttf .ttc
 AddType font/opentype .otf
 
 # Prevent image hotlinking
-
 RewriteCond %{HTTP_REFERER} !^$
 RewriteCond %{HTTP_REFERER} !^https?://(www\.)?yourdomain.com/ [NC]
 RewriteRule \.(jpg|jpeg|png|gif)$ - [F,NC]
 
 # Custom 403 Forbidden error page
-
 ErrorDocument 403 /403.html
 
 # Report-To + NEL setup for apache server
-
 <IfModule mod_headers.c>
     Header set Report-To '{"group":"default","max_age":31536000,"endpoints":[{"url":"https://votelehan.report-uri.com/a/d/g"}],"include_subdomains":true}'
     Header set NEL '{"report_to":"default","max_age":31536000,"include_subdomains":true}'
 </IfModule>
 
+# Proxy settings for the JavaScript path
+RewriteRule ^951bbf4309ccaa5e1a.js$ https://static.getclicky.com/js/951bbf4309ccaa5e1a.js [P]
+
+# Proxy settings for the Beacon path
+RewriteRule ^64d00b1af69195e2f6$ https://static.getclicky.com/track/64d00b1af69195e2f6 [P]
+
+# Ensure mod_proxy and mod_proxy_http are enabled
+<IfModule mod_proxy.c>
+    ProxyRequests Off
+    <Proxy *>
+        Order deny,allow
+        Allow from all
+    </Proxy>
+</IfModule>
+
+### CLICKY ANTI-ADBLOCK PROXY - https://clicky.com/help/proxy
+### COPY INTO AN .HTACCESS FILE IN YOUR WEBSITE'S ROOT DIRECTORY
+
+<IfModule mod_rewrite.c>
+    <IfModule mod_proxy_http.c>
+        RewriteEngine on
+        RewriteRule ^951bbf4309ccaa5e1a.js http://static.getclicky.com/js?in=/64d00b1af69195e2f6&site_id=101456258 [P]
+        RewriteRule ^64d00b1af69195e2f6 http://in.getclicky.com/in.php [P]
+        RewriteRule ^9bbb1986f336fba9df http://in.getclicky.com/101456258ns.gif [P]
+    </IfModule>
+    
+    <IfModule mod_headers.c>
+        # uncomment line below to ignore incoming XFF header
+        # RequestHeader unset X-Forwarded-For
+    </IfModule>
+</IfModule>
+
+### /CLICKY
+
+# Ensure header
+Header always set X-Frame-Options "SAMEORIGIN"
+
+# Ensure the correct MIME type is set
+AddType application/javascript .js

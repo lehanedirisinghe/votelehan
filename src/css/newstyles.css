@@ -1,92 +1,450 @@
-/* styles.css */
+/* Main Stylesheet for the Website */
 
-/* General Styles */
+/* Chapter 1: Critical Layout Styles - Highest Priority */
+
+/* 1.1 - General Styles for Body */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Roboto', Arial, sans-serif; /* Uniform font for better readability */
+    color: #444;
+    font-size: 16px; /* Standard text size for readability */
+    line-height: 1.6; /* Adjusted line height for better readability */
+    letter-spacing: 0.15px;
     margin: 0;
-    padding: 0;
-    padding-top: 5px;
-    background-color: #f3effa;
+    padding-top: 16px; /* Space for fixed navbar */
+    background-color: #f0f0f0; /* Soft purple background for a light theme */
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: #333;
-    margin-top: 0;
+header {
+    margin-bottom: 10px; /* Reduce the space below the header */
 }
 
-p {
-    margin: 1em 0;
+main {
+    padding-top: 0; /* Remove unnecessary padding */
 }
 
-/* Navigation Styles */
+
+html {
+    scroll-behavior: smooth; /* Smooth Scroll */
+}
+
+
+.problem {
+    color: rgb(151, 24, 5); /* Change this to your desired color */
+    font-weight: normal;
+}
+
+.solution {
+    color: rgb(11, 47, 165); /* Change this to your desired color */
+    font-weight: normal;
+}
+
+
+/* 1.2 - Navigation Menu */
 nav {
-    background-color: #7E57C2;
-    color: #ffffff;
-    padding: 7px 0;
-    position: fixed;
-    width: 100%;
+    background-color: rgba(240, 240, 240, 0.9); /* Purple background for distinct appearance */
+    color: #444; /* White text for contrast */
+    margin: 0px;
+    padding: 0px 0px;
+    position: fixed; /* Fixed at the top */
+    width: 100%; /* Full width */
     top: 0;
-    z-index: 1000;
+    z-index: 1000; /* Ensures navigation stays on top */
+    text-align: center;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex; /* Horizontal alignment */
+    justify-content: center; /* Center items horizontally */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0;
+    padding: 0px 0px;
+    margin-right: 8px; /* Space between items */
+}
+
+nav ul.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: 2px solid #673AB7;
+    padding: 5px;
+    color: #673AB7;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+@media (max-width: 700px) {
+    .hamburger {
+        display: block;
+    }
+    nav ul {
+        display: none;
+    }
+    nav ul.active {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+nav ul li a {
+    color: #555;
+    width: auto;
+    text-decoration: none;
+    padding: 7px 8px;
+    display: inline-block;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    background-color: #c1c1c1; /* Darker purple on hover/active */
+    color: #fafafa;
+    padding: 7px 8px;
+}
+
+nav ul li a.active {
+    background-color: #747474;
+    font-weight: bold;
+    color: #fafafa;
+    padding: 7px 8px;
+}
+
+/* Menu changes on scroll */
+.navbar-white {
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+.nav-faded ul li a {
+    color: #aaa; /* Lighter color for faded effect */
+}
+
+.nav-faded ul li a.active {
+    background-color: #858585b9; /* Lighter shade of gray */
+    color: #fafafa; /* Darker text color for better readability */
+}
+
+
+
+/* 1.3 - Sidebar */
+.sidebar {
+    width: 200px;
+    background-color: #fafafa;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 20px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Chapter 2: Content Display - Important for Usability */
+
+/* 2.1 - Section Styling */
+section {
+    width: 33%; /* Adjusted width for better focus on content */
+    margin: 3% auto; /* Centering sections */
+    padding: 6px 12px;
+    background-color: #f0f0f0;
+    border-radius: 0px; /* Rounded corners for modern look */
+    box-shadow: 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+
+section h2,
+section h3 {
+    color: #555; /* Consistent text color */
+    margin-top: 20px; /* Adds space before headings */
+    margin-bottom: 8px; /* Adds space after headings */
+}
+
+section p {
+    color: #666;
+    font-size: 16px; /* Legible text size */
+    line-height: 1.6; /* Adjusted line height for better readability */
+    margin-top: 8px; /* Adds space before paragraphs */
+    margin-bottom: 16px; /* Adds space after paragraphs */
+}
+
+/* 2.2 - Cookie Consent Popup */
+.cookie-consent {
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: rgba(248, 249, 250, 0.95);
+    text-align: center;
+    padding: 0px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-top: 2px solid #7E57C2;
+    border-radius: 3px;
+    display: flex; /* Hidden by default, switch to flex from none */
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Ensure it appears above other elements */ 
+}
+
+.cookie-consent.hidden {
+    display: none !important;
+}
+
+.cookie-consent p {
+    margin: 10px;
+    font-size: 16px;
+    flex-grow: 1;
+}    
+
+.cookie-consent button {
+    background-color: #875EC7;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+.cookie-consent button:hover {
+    background-color: #673AB7; /* Slightly darker on hover */
+}
+
+/* 2.3 - Images */
+.image-container {
+    max-width: 100%;
+    margin-top: 10px;
+    overflow: hidden;
     display: flex;
     justify-content: center;
 }
 
-nav ul li {
-    display: inline-block;
-    margin-right: 20px;
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-nav ul li a {
+/* 2.4 - Links */
+a {
+    color: #5462e1; /* Standard blue color for links */
+    text-decoration: none; /* Ensure links are underlined */
+}
+
+a:hover {
+    color: #009e12; /* Slightly darker blue for hover state */
+    text-decoration: underline;
+    font-weight: none;
+}
+
+/* Visited state, excluding .main-nav links */
+a:not(.main-nav):visited {
+    color: #006a0c; /* Orange color for visited links */
+}
+
+/* To ensure global styles don't affect nav links */
+nav ul li a:hover {
     color: #fff;
     text-decoration: none;
-    padding: 5px 10px;
 }
 
-nav ul li a:hover {
-    background-color: #673AB7;
-    text-decoration: none;
+/* Point form or Lists */
+ul li {
+    margin-bottom: 5px;
+    color: #666; /* Keep this off or at 0 px, as it messes up the nav menu which is also a list */
 }
 
-nav ul li a.active {
-    font-weight: bold;
-    color: #673AB7;
+ol li {
+    margin-bottom: 5px;
+    color: #666;
+
 }
 
-body {
-    padding-top: 60px;
+/* Add spacing to lists in content sections which we tag as content-list, which allows us to keep other lists as they are. */
+.content-list li {
+    margin-bottom: 6px;
+    color: #666;    
 }
 
-/* Section Styles */
-section {
-    width: 80%;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Specific styling for problems list */
+.problems-list {
+    list-style-type: disc; /* Standard bullet points */
+    padding-left: 20px; /* Add padding to align bullets properly */
+    margin: 0; /* Reset margin to avoid unintended spacing */
 }
 
-section h2 {
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 10px;
+.problems-list li {
+    margin-bottom: 10px; /* Add spacing between list items */
+    color: #666; /* Consistent text color */
+    font-size: 16px; /* Ensure font size matches the rest of the content */
+    line-height: 1.6; /* Adjust line height for readability */
 }
 
-section p {
-    color: #333;
-    font-size: 16px;
-    line-height: 1.5;
+
+/* Chapter 3: Auxiliary Styles - Enhancing Aesthetics */
+
+/* 3.1 - Buttons and Links */
+.button, button {
+    background-color: #673AB7; /* Green for visibility */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
 }
 
-/* Hidden class to toggle visibility */
+.button:hover, button:hover {
+    background-color: #875EC7; /* Darker green on hover */
+}
+
+/* 3.2 - Tables for Structured Data */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+}
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* 3.3 - Hidden */
 .hidden {
-    display: none;
+    display: none !important;
 }
+
+/* Chapter 4: Responsive Design - Ensuring Accessibility on Mobile Devices */
+@media (max-width: 700px) {
+    .container, nav a {
+        width: 100%; /* Full width for smaller screens */
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    nav ul li {
+        text-align: center; /* Center-align items */
+        margin-right: 0; /* No right margin */
+    }
+}
+
+/* Footer Styles */
+footer {
+    background: #f0f0f0;
+    color: #444;
+    text-align: center;
+    position: static;
+    max-width: 100%;
+    margin: 0 auto;
+    height: auto;
+    padding: 10px 20px 70px 20px; /* Adjusted vertical padding */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    margin: 5px 10px; /* Reduced margin for less spacing */
+    flex: 1;
+    min-width: 200px;
+    max-width: 400px;
+}
+
+.footer-section h2 {
+    font-size: 26px;
+    margin-bottom: 5px; /* Reduced bottom margin for heading */
+}
+
+.footer-section p {
+    margin: 5px 0; /* Reduced margin for paragraphs */
+}
+
+.footer-section a {
+    color: #0014f4;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+    color: #009e12;
+}
+
+
+/* Chapter 6: Scroll to Top Button Styles - Ensuring Accessibility on Mobile Devices */
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #444;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    z-index: 1000;
+}
+
+.scroll-to-top:hover {
+    background-color: #333;
+    color: #fff;
+}
+
