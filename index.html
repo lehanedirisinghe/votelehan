@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>VoteLehan.com | Home Page Overview | Sri Lanka: A Nation Reborn! </title>
     
-    <meta name="description" content="Vote Lehan for a developed Sri Lanka. Learn policies, stories and partner in this quick 5-minute summary. We try to make it simple for newcomers.">
+    <title>VoteLehan.com | Home Page Overview | Sri Lanka: A Nation Reborn! </title>
+    <meta name="description" content="Vote Lehan for a developed Sri Lanka. Learn policies, stories and partner.">
 
     <!-- Meta tags for SEO -->
-    <meta name="keywords" content="Sri Lanka, Lehan Edirisinghe, political reform, national development, leadership, economic policies, social improvement, Vote Lehan, policy summaries, governance">
-    <meta name="subject" content="Lehan Edirisinghe's Vision for a Developed Sri Lanka">
+    <meta name="keywords" content="Sri Lanka, Lehan Edirisinghe, political reform, national development, leadership, economic policies, social improvement, Vote Lehan, policy, governance">
+    <meta name="subject" content="This is the home page">
     <meta name="author" content="Lehan Edirisinghe">
     <meta name="date" content="2024-06-15">
     <meta name="robots" content="index, follow">
@@ -20,16 +19,19 @@
     <meta name="copyright" content="VoteLehan.com">
     <meta name="generator" content="Microsoft Visual Studio Code">
 
+
 <!-- Content Security Policy for testing -->
 <meta http-equiv="Content-Security-Policy" content="
 default-src 'self';
 script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://www.googletagmanager.com https://cdn.jsdelivr.net https://www.google-analytics.com https://cdn.jsdelvr.net;
 style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
 font-src 'self' https://fonts.gstatic.com;
-img-src 'self' data:;
+img-src 'self' data: https://www.googletagmanager.com;
+frame-src 'self' https://www.googletagmanager.com;
 connect-src 'self' https://www.google-analytics.com https://cdn.jsdelvr.net;">
 
-    <!--  report-uri https://votelehan.report-uri.com/r/d/csp/reportOnly;" Keep in the server or htaccess instead as it does not work as a meta head tag for some weird reason-->
+
+<!--  report-uri https://votelehan.report-uri.com/r/d/csp/reportOnly;" Keep in the server or htaccess instead as it does not work as a meta head tag for some weird reason-->
 
 <!-- Update this, with HTAccess on apache, test, then use or stop-->
     <meta http-equiv="Report-To" content="{&quot;group&quot;:&quot;csp-endpoint&quot;,&quot;max_age&quot;:10886400,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://votelehan.report-uri.com/a/d/g&quot;}],&quot;include_subdomains&quot;:true}">
@@ -38,14 +40,12 @@ connect-src 'self' https://www.google-analytics.com https://cdn.jsdelvr.net;">
     
     <!-- X-Content-Type-Options to prevent MIME type sniffing -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
     <!-- Referrer-Policy to control the information sent in the Referer header -->
     <meta name="referrer" content="no-referrer">
 
     <!-- Privacy protections to visitors -->
     <meta http-equiv="Permissions-Policy" content="geolocation=(self), microphone=(), camera=(), gyroscope=(), magnetometer=(), usb=(), midi=(), accelerometer=(), autoplay=(self), fullscreen=(self)">
-
-
-    <!-- Remove this line for X-Frame-Options meta http-equiv="X-Frame-Options" content="DENY" -->
 
     <!-- Strict-Transport-Security to enforce secure (HTTPS) connections to the server -->
     <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
@@ -59,13 +59,16 @@ connect-src 'self' https://www.google-analytics.com https://cdn.jsdelvr.net;">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
     <!-- Preload critical resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/src/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-        <link rel="stylesheet" href="/src/css/styles.css">
-    </noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="/src/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap">
+    <link rel="stylesheet" href="/src/css/styles.css">
+</noscript>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
 
     <!-- Favicon links -->
     <link rel="icon" href="/src/images/favicon.ico" type="image/x-icon">
@@ -97,7 +100,15 @@ connect-src 'self' https://www.google-analytics.com https://cdn.jsdelvr.net;">
     gtag('js', new Date());
     gtag('config', 'G-80876GKS9T');
     </script>
-    
+<!-- End GA4 Configuration -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBHTJPM6"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!--JAVASCRIPT Vote Lehan -->
+<script type="module" src="/src/js/javascript.js" defer></script>
 
     <header>
         <nav>
@@ -114,292 +125,24 @@ connect-src 'self' https://www.google-analytics.com https://cdn.jsdelvr.net;">
     </header>
 
     <main>
+
         <section id="votelehan.com">
             <h1>VoteLehan.com </h1>
-            <p>Hi, I'm Lehan. You found my vision for a developed Sri Lanka.</p>
+            <p>Hi, I'm Lehan. You found my vision to develop Sri Lanka.</p>
             <p>You are reading language:
-
+    
                 <select id="language-selector" class="language selector">                    
                     <option value="en" selected>English</option>
                     <option value="si">Sinhalese</option>
                     <option value="ta">Tamil</option></select>. 
                 
                 මම මගේ භාෂාවට ආදරෙයි. பெருமையுடன் தேர்ந்தெடுங்கள். </p>
-            <p>Here's a 5-minute summary:</p>
+
             <div class="image-container">
                 <img src="/src/images/lehan.png" alt="Lehan Edirisinghe photograph with a flower in blue" loading="lazy">
             </div>
         </section>
-        
-        <section id="problems-summary">
-            <h2>Problems</h2>
-            <p><a href="/problems/bad-leaders.html">Bad Leaders</a>: It hurts to accept responsibility, for collective mistakes when selecting from a few horrid decision makers. It's time to finally break free from this cycle of hell.</p>
-                
-            <p><a href="/problems/hostile-countries.html">Hostile Countries</a>: Pariah states control the regional neighborhood, picking incapable leaders to rule us by proxy. Your vote means we rise up to win back our island.</p>
-            
-            <p><a href="/problems/evil-racketeers.html">Evil Racketeers</a>: Big profits in Sri Lanka's failure, ensured our people's collapse. All my designs grow our fortunes.</p>
-        
-            <p><a href="/problems/fake-buddhist.html">Fake Buddhist</a>: A faith system designed to make people free of suffering, twisted to justify misery. Many prayers will soon be answered when we wake up.</p>
-        
-            <p><a href="/problems/weak-courts.html">Weak Courts</a>: Corruption, theft, everywhere. No court cases to be done any time soon. How about we reach Denmark's court benchmark?</p>
-        
-            <p><a href="/problems/low-standards.html">Low Standards</a>: From food, to education, to health, the poverty trap hits us all. We're sick of compromising. We believe you will do what's best from a position of strength, comfort and ease.</p>
-        
-            <p><a href="/problems/beggar-nation.html">Beggar Nation</a>: From $1 = Rs 3.77 to Rs 300: We have tumbled downhill over the last 70 years to poverty. It's time to start acting like a republic, not an unsightly failure.</p>
 
-            <p> <a href="/problems/dying-sinhalese.html">Dying Sinhalese</a>: Disaster status despite paying $ billions in taxes. Every failure contributes to the systematic replacement of our Sinhalese. It's time to give our people life.</p>
-
-        </section>
-
-        <section id="policy-summary">
-            <h2>Policy</h2>
-            <p>These are my key policies:</p>
-            <p><a href="/policy/president.html">1. President</a>: I head our Sri Lanka Family Tree with vision, transparency and my personalized directions as an authoritative leader.</p>
-
-                <ul>
-                    <li>Sri Lanka Family Tree
-                    </li>
-
-                    <li>Bank of Sri Lanka
-                    </li>
-
-                    <li>Appointing Cabinet</li>
-
-                    <li>Adding English
-                    </li>
-
-                    <li>Compulsory Land Purchase
-                    </li>
-                
-                    <li>Sri Lankan Dollars (LKD)
-                    </li>
-                </ul>
-                <p><a href="/policy/p.html">2. Prime Minister</a>: Directs economy departments, institutional investor SLWF (25%) and SL Treasury Reserves (20%)! </p>
-                <ul>
-                <li>State Assets: MNC-partner authority  
-                </li>
-                <li>Free ERP Accounting (SL-modified GAAP)
-                </li>
-                </ul>
-                
-                <p><a href="/policy/speaker.html">3. Speaker</a>: Making sure our people's requests earn a direct response. Our 100 MP Staffers x 500 MPs will help.</p>
-                
-                <ul>
-                    <li>Guided, managed e-democracy 
-                    </li>
-                    <li>Parliament approve laws by internet-proxy
-                    </li>
-                    <li>MPs work as customer service agents
-                    </li>
-                </ul>
-
-                <p><a href="/policy/finance.html">4. Finance</a>: Making sure all our people attain relative financial independence as successful investors. My taxes, budget and strategies around our currency are found here. </p>
-                <ul>
-                    <li>Effective rates of tax 
-                    </li>
-                    <li>Automated, simple 10 taxes
-                    </li>
-                    <li>Budget invested in productivity 
-                    </li>
-                </ul>
-
-                <p><a href="/policy/foreign.html">5. Foreign</a>: Leading our pro-US, UK, CA, AU, NZ and JP foreign relations. Collectively benefiting our own people.</p>
-                
-                <p><a href="/policy/law.html">6. Law</a>: Settling the many disputes which we face, with honesty, on time.</p>
-
-                <ul>
-                    <li>Import updated, advanced Nordic, UK and US laws
-                    </li>
-                    <li>SLFT-weighted, internet-voting-based rulings
-                    </li>
-                    </ul>
-
-                <p><a href="/policy/home.html">7. Home</a>: Keeping our cities safe from crime, improving a sense of confidence in the rule of law and bringing relief to the innocent.</p>
-                <ul>
-                    <li>Police-state: CCTV surveillance everywhere
-                    </li>
-                    <li>Law enforcement control sex, drugs and alcohol
-                    </li>
-                    </ul>
-    
-                <p><a href="/policy/defense.html">8. Defense</a>: Defending the sovereignity of Sri Lanka with a well-trained armed forces who can combat threats.</p>
-                <ul>
-                    <li>Military Conscription
-                    </li>
-                </ul>
-
-        </section>
-
-        <section id="economy-summary">
-            <h2>Economy</h2>
-            <p>My PM leads our economy:</p>
-                <p><a href="/economy/pmo.html">9. Prime Minister’s Office</a>: Creating the best environment we can for our industries' businesses to competitively solve problems.</p>
-                <ul>
-                <li>Sri Lanka Wealth Fund
-                </li>
-                <li>Ease of Doing Business focus
-                </li>
-                <li>Economic Growth (GDP) oriented
-                </li>
-                </ul>
-                
-            
-                <p><a href="/economy/trade.html">10. Trade</a>: Giving our employers, employees and workers the solutions they need to work optimally.</p>
-                <ul>
-                <li>Globalist capitalist
-                </li>
-                <li>Standardized work, opportunity and firm structures 
-                </li>
-                </ul>
-
-                <p><a href="/economy/tech.html">11. Tech</a>: Deploying the most reliable, helpful and meaningful methods we can afford to unlock growth potential.</p>
-                <ul>
-                    <li>Priority electronics device sale list
-                    </li>
-                </ul>
-    
-
-                <p><a href="/economy/transport.html">12. Transport</a>: Getting people to where they need to go, with comfort, ease and low travel prices.</p>
-                
-
-                <p><a href="/economy/tourism.html">13. Tourism</a>: Giving our guests a wonderful vacation that they dream of, work hard for and wait to enjoy.</p>
-                <ul>
-                    <li>Casino monopoly: Sigiriya Rock Fortress zone
-                    </li>
-                    </ul>
-    
-                <p><a href="/economy/energy.html">14. Energy</a>: Reliably supplying the country with energy, while improving our environment and sustainability.</p>
-                <ul>
-                    <li>Clearing forests for city expansion
-                    </li>
-                    <li>Monopoly on environmental resources
-                    </li>
-                    </ul>
-    
-                <p><a href="/economy/ports.html">15. Ports</a>: Providing the world with a fun, reliable and helpful place to ship from to where goods are requested.</p>
-
-                <p><a href="/economy/housing.html">16. Housing</a>: Keeping every member of the SL Family Tree housed, so they are contributing fully.</p>
-                <ul>
-                    <li>Zoning, all planned cities, home ownership
-                    </li>
-                    <li>Sale of 80% public land to private SLFT
-                    </li>
-                    </ul>
-    
-
-        </section>
-
-        <section id="social-summary">
-            <h2>Social</h2>
-            <p>My president's office handle:</p>
-            <p><a href="/social/po.html">17. President's Office</a>: Responding to our people's requests directly, ensuring their quality of life improves. My Attorney General will solve crimes.</p>
-                <ul>
-                    <li>Quality of Life improvement emphasis
-                    </li>
-                    <li>Belt and Road Initiative: rework $15b Port City
-                    </li>
-                    <li>Sirisena Easter 2019 April 21 Terror Attacks
-                    </li>
-                    <li>ETI Finance Ponzi Scam
-                    </li>
-                    <li>Withdraw 100% marked-up Russian coal sales
-                    </li>
-                    <li>Social Events: maintain open public access 
-                    </li>
-                </ul>
-
-                <p><a href="/social/media.html">18. Media Department</a>: Informing our people with the facts, entertainment and updates they need, to arm themselves to decide what is best for them, their family and future.</p>
-
-                <ul>
-                    <li>Absolute freedom of speech for all
-                    </li>
-                    </ul>
-    
-
-                <p><a href="/social/education.html">19. Education Department</a>: Creating a nation of confident problem solvers, honest critical thinkers and ethical leaders, who enjoy staying life-long learners.</p>
-
-                <ul>
-                    <li>Sri Lanka University (owned by SLWF)
-                    </li>
-                    <li>Cool, "developed-country" styled syllabus
-                    </li>
-                    <li>All mixed boy-girl schools 
-                    </li>
-                </ul>
-    
-                <p><a href="/social/health.html">20. Health Department</a>: Improving our SL FT's public health, keeping us able to do our best for each other.</p>
-
-                <p><a href="/social/food.html">21. Food Department</a>: Feed our people the healthy, nutrious 3,000 calories they require to fuel their bodies, to live their lives happily.</p>
-
-                <ul>
-                    <li>Intensive farming for SLFT with SLWF
-                    </li>
-                </ul>
-    
-                <p><a href="/social/fun.html">22. Fun Department</a>: It's vital to enjoy ife by having fun, socializing with games, hobbies, art, interests or sports.</p>
-
-                <p><a href="/social/buddhist.html">23. Buddhist Department</a>: All faiths, the spiritual and secular, will enjoy their own journey in peace, as buddhist wisdom cherishes an end to suffering.</p>
-                <ul>
-                    <li>Head of state acts as Buddhist supreme governor 
-                    </li>
-                    </ul>
-    
-                <p><a href="/social/women's.html">24. Women's Department</a>: Making sure our women, LGBT, disabled, young or old, and even animals, get to present their authentic selves, with fair, equal and sensible opportunities.</p>
-                <ul>
-                    <li>Constitutional equal pay, for equal work
-                    </li>
-                    </ul>
-    
-
-        </section>
-
-        <section id="story-summary">
-            <h2>Story</h2>
-
-                <p><a href="/story/history.html">History</a>: My take on our history, present times and an ideal future.</p>
-
-                <p><a href="/story/lehan.html">Lehan</a>: All about me. What shapes my character.</p>
-
-                <p><a href="/story/world.html">World</a>: Way I see every country; cherry-picking their best ideas.</p>
-
-                <p><a href="/story/map.html">Map</a>: Showcase our peoples, and how we approach every district.</p>
-
-                <p><a href="/story/military.html">Military</a>: Early decisions on train, arm and defend our people.</p>
-
-                <p><a href="/story/law.html">Law</a>: Updated nordic law codes, poll rulings, a new constitution.</p>
-
-                <p><a href="/story/mnc.html">MNC</a>: Profit share: Our SLFT 45%, MNCs 30% and SL Gov't 25%.</p>
-
-                <p><a href="/story/wealth.html">Wealth</a>: SLFT own all with SLWF: profit powerhouse wonder.</p>
-            
-        </section>
-
-        <section id="partner-summary">
-            <h2>Partner</h2>
-
-<p><a href="/partner/following.html">Following</a>: Loyal friends direct and support our community.</p>
-
-<p><a href="/partner/lobby.html">Lobby</a>: Our solid business-case invites support.</p>
-
-<p><a href="/partner/voters.html">Voters</a>: You can hear why our registered voters support us.</p>
-
-
-<p><a href="/partner/contribute.html">Contribute</a>: War chest for SL filled with sales honoring partners.</p>
-
-
-<p><a href="/partner/invest.html">Invest</a>: Easy way for enterprises to gain SLWF early access.</p>
-
-   
-<p><a href="/partner/family.html">Family</a>: Genetics-based SL Family Tree to make us great.</p>
-
-
-<p><a href="/partner/games.html">Games</a>: Comic online-games to play on our site.</p>
-
-<p><a href="/partner/connect.html">Connect</a>: Use this contact page to connect with us.
-</p>
-
-            
-        </section>
     </main>
 
     <footer>
@@ -410,9 +153,6 @@ connect-src 'self' https://www.google-analytics.com https://cdn.jsdelvr.net;">
         </div>
         <div class="footer-container">
             <div class="footer-section">
-                <h2>Let's Develop Sri Lanka!</h2>
-                <p>Proudly buy a name for life as a Partner:</p>
-                <p><a href="/fund.html">Fund Now: $5</a></p>
                 <p>Vote Lehan &copy; <span id="currentYear"></span></p>
                 <p>
                     <a href="/terms.html">Terms</a>
@@ -422,15 +162,5 @@ connect-src 'self' https://www.google-analytics.com https://cdn.jsdelvr.net;">
             </div>
         </div>
     </footer>
-        
-<!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBHTJPM6"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-<!--JAVASCRIPT Vote Lehan -->
-<script type="module" src="/src/js/javascript.js" defer></script>
-
 </body>
-
 </html>

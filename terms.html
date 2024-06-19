@@ -4,26 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Vote Lehan | Terms | Rules We Use</title>
     <meta name="description" content="These are the rules used by Vote Lehan to keep the website safe, users happy and to achieve their goal of winning the election to advance Sri Lankans.">
 
-    <!-- Content Security Policy for testing; unsafe inline script allowed for now as it is otherwise buggy on some test devices -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; report-uri https://votelehan.report-uri.com/r/d/csp/reportOnly;">
+    <!-- Meta tags for SEO -->
+    <meta name="keywords" content="Sri Lanka, Lehan Edirisinghe, political reform, national development, leadership, economic policies, social improvement, Vote Lehan, policy, governance">
+    <meta name="subject" content="This is the home page">
+    <meta name="author" content="Lehan Edirisinghe">
+    <meta name="date" content="2024-06-15">
+    <meta name="robots" content="index, follow">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="14 years">
+    <meta name="copyright" content="VoteLehan.com">
+    <meta name="generator" content="Microsoft Visual Studio Code">
 
-    <!-- Update this, with HTAccess on apache, test, then use or stop-->
+
+<!-- Content Security Policy for testing -->
+<meta http-equiv="Content-Security-Policy" content="
+default-src 'self';
+script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://www.googletagmanager.com https://cdn.jsdelivr.net https://www.google-analytics.com https://cdn.jsdelvr.net;
+style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+font-src 'self' https://fonts.gstatic.com;
+img-src 'self' data: https://www.googletagmanager.com;
+frame-src 'self' https://www.googletagmanager.com;
+connect-src 'self' https://www.google-analytics.com https://cdn.jsdelvr.net;">
+
+
+<!--  report-uri https://votelehan.report-uri.com/r/d/csp/reportOnly;" Keep in the server or htaccess instead as it does not work as a meta head tag for some weird reason-->
+
+<!-- Update this, with HTAccess on apache, test, then use or stop-->
     <meta http-equiv="Report-To" content="{&quot;group&quot;:&quot;csp-endpoint&quot;,&quot;max_age&quot;:10886400,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://votelehan.report-uri.com/a/d/g&quot;}],&quot;include_subdomains&quot;:true}">
+
     <meta http-equiv="NEL" content="{&quot;report_to&quot;:&quot;csp-endpoint&quot;,&quot;max_age&quot;:10886400,&quot;include_subdomains&quot;:true,&quot;success_fraction&quot;:0,&quot;failure_fraction&quot;:0.1}">
     
     <!-- X-Content-Type-Options to prevent MIME type sniffing -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
     <!-- Referrer-Policy to control the information sent in the Referer header -->
     <meta name="referrer" content="no-referrer">
 
     <!-- Privacy protections to visitors -->
     <meta http-equiv="Permissions-Policy" content="geolocation=(self), microphone=(), camera=(), gyroscope=(), magnetometer=(), usb=(), midi=(), accelerometer=(), autoplay=(self), fullscreen=(self)">
 
-    <!-- X-Frame-Options to prevent clickjacking -->
-    <meta http-equiv="X-Frame-Options" content="DENY">
     <!-- Strict-Transport-Security to enforce secure (HTTPS) connections to the server -->
     <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
 
@@ -36,19 +59,57 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
     <!-- Preload critical resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/src/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-        <link rel="stylesheet" href="/src/css/styles.css">
-    </noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="/src/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap">
+    <link rel="stylesheet" href="/src/css/styles.css">
+</noscript>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
 
     <!-- Favicon links -->
     <link rel="icon" href="/src/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/src/images/favicon-32x32.png" sizes="32x32" type="image/png">
+
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+
 </head>
+
+
 <body>
+
+<!-- Google Tag Manager -->
+    <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TBHTJPM6');
+    </script>
+<!-- End Google Tag Manager -->
+
+<!-- GA4 Configuration -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-80876GKS9T"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-80876GKS9T');
+    </script>
+<!-- End GA4 Configuration -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBHTJPM6"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!--JAVASCRIPT Vote Lehan -->
+<script type="module" src="/src/js/javascript.js" defer></script>
+
     <header>
         <nav>
             <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
@@ -64,102 +125,78 @@
     </header>
 
     <main>
-    </main>
-    <main>
 
         <section id="terms-full">
             <h1>Terms</h1>
-            <p>Thanks for studying our terms of use. </p>
             
-            <p>By using our website, you agree to these terms. If you do not agree, please discontinue use immediately.</p>
+            <p>Only use our website if you agree with these terms. </p>
             
             <h2>Terms of Use</h2>
-            <p>Our website is a platform to share ideas, inspire a better future through leadership, and support our people's journey. </p>
+            <p>We share Lehan's vision, inspire voters to lead and help us win votes to do so. </p>
             
-            <p>While we aim to provide content suitable for all general audiences, parental guidance is advised. An older sibling, parent or friend should explain mature themes to teenagers below age 14. </p>
-            <p>Some ideas may be controversial or ambiguously open to interpretation or divisive due to its political nature. </p>
+            <p>Teenagers below age 14 may benefit from guidance as mature themes are discussed. </p>
 
-            <p>Despite our efforts: we are not liable for any errors, omissions, or delays in the content provided. </p>
-            
-            <p>Treat it as fictional or for entertainment if it helps you engage without fully accepting the ideas.</p>
             
             <h2>Privacy Policy</h2>
-            <p>We respect your privacy. Our website uses cookies in compliance with GDPR and CCPA regulations. </p>
+            <p>We use GDPR and CCPA compliant cookie. </p>
 
-            <p>We use essential cookies for Google Analytics and PiwikPro to analyze data and improve your experience. Helping us prioritize popular content and reduce less popular items.</p>
+            <p>Essential cookies help study data, make sure our website loads completely as intended and improve experiences.</p>
             
-            <p>We do not use marketing cookies or send marketing emails.</p>
+            <p>We hate marketing cookies and never spam emails.</p>
             
-            <p> Cached data may be stored to speed up load times for frequently visited pages.</p>
+            <p> Caching data speeds up loading frequently visited pages.</p>
             
             <h2>Cookies</h2>
-            <p>Our cookies are temporary and self-delete within one year.</p> 
+            <p>Cookies are temporary and self-delete within one year.</p> 
+                
+            <p>Whitelist us on Adblockers or you'll see incomplete content. </p>
             
-            <p>You can delete cookies via your browser's developer tools, while on our website, after which our cookie banner will reappear, or the site may take a few seconds longer to load. </p>
-                
-            <p>Certain web tools may block valuable content, so we recommend you whitelist us for a full experience. </p>
-                
+            <h2>Personal Content</h2>
             <p>We do not store personal data without explicit consent.</p>
         
             <h2>Geographic Restrictions</h2>
-            <p>We may restrict access to certain countries based on IP addresses to comply with regulations. </p>
-            
-            <p>Users from restricted regions can still access our site via tunneling, VPN services, or the TOR browser. </p>
-            
-            <p>However, we  blocked access to popular VPN services to mitigate cyber attacks. Those VPN users won't find us. </p>
-            
-            <p>These measures help us reduce risks and manage security threats. </p>
-            
-            <h2>About Us</h2>
-            <p><strong>Vote Lehan</strong> is a political campaign website to elect Lehan Edirisinghe as Sri Lanka's president. You can find a lot of key policies here. </p>
+
+            <p>We deny VPNs and hostile nation IP address ranges. </p>
             
             <h2>Website Infrastructure</h2>
-            <p>For insights into our website's functionality, explore your browser's developer console, view the page source or use tools on the internet.</p>
+
             <ul>
-                <li><strong>Domain Registrar</strong>: Hostinger (Lithuania)</li>
-                <li><strong>Web Hosting</strong>: Hostinger (Lithuania)</li>
-                <li><strong>Analytics</strong>: Google Analytics 4 (US) and PiwikPro (Poland)</li>
-                <li><strong>Fonts</strong>: Google Fonts (US)</li>
-                <li><strong>CDNs</strong>: Planned - Amazon CloudFront, Cloudflare, and Akamai (all US-based)</li>
-                <li><strong>Website Deployment</strong>: GitHub Pages</li>
+                <li><strong>DNS</strong>: Hostinger (Lithuania)</li>
+                <li><strong>Hosting</strong>: Hostinger (Lithuania)</li>
+                <li><strong>Analytics</strong>: Google Analytics 4 (US)</li>
+                <li><strong>Fonts</strong>: "Roboto" Google Fonts (US)</li>
+                <li><strong>CDNs</strong>: Amazon CloudFront, Cloudflare, Akamai (US)</li>
+                <li><strong>Deployment</strong>: GitHub Pages (US)</li>
+                <li><strong>Protection</strong>: Cloudflare (US)</li>
             </ul>
-            
-            <h2>Security Measures</h2>
-            <p>We prioritize your security with:</p>
-            <ul>
-                <li><strong>Website Protection</strong>: Cloudflare (US)</li>
-                <li><strong>Spam Prevention</strong>: Google reCAPTCHA (US)</li>
-                <li><strong>Browsing Safety</strong>: Google Safe Browsing (US)</li>
-            </ul>
-            <p>For cybersecurity, we do not accept, download, or upload files.</p>
+        
+               
         </section>
     
     
-</main>
+    </main>
 
-<footer>
-    <div id="cookie-consent" class="cookie-consent">
-        <p>Save cookies detailed in <a href="/terms.html">Terms</a> to load fully?
-            <button id="cookie-accept">Yes, I accept!</button>
-        </p>
-    </div>
-    <div class="footer-container">
-        <div class="footer-section">
-            <h2>Let's Develop Sri Lanka!</h2>
-            <p>Proudly buy a name for life as a Partner:</p>
-            <p><a href="/fund.html">Fund Now: $5</a></p>
-            <p>Vote Lehan &copy; <span id="currentYear"></span></p>
-            <p>
-                <a href="/terms.html">Terms</a>
-                <a href="/src/layout.html">Site Layout</a> 
-                <a href="#top">Back to Top ↑</a>
-            </p>
+    <footer>
+        <div class="footer-container">
+            <div id="cookie-consent" class="cookie-consent">
+                <p>Save cookies detailed in <a href="/terms.html">Terms</a> to load fully?
+                    <button id="cookie-accept">Yes, I accept!</button>
+                </p>
+            </div>
+            <div class="footer-section">
+                <p>Vote Lehan &copy; <span id="currentYear"></span></p>
+                <p>
+                    <a href="/terms.html">Terms</a>
+                    <select id="language-selector" class="language-selector">
+                            <option value="en" selected>English</option>
+                            <option value="si">Sinhalese</option>
+                            <option value="ta">Tamil</option>
+                    </select>
+                    <a href="/src/layout.html">Site Layout</a> 
+                    <a href="#top">Back to Top ↑</a>
+                </p>
+            </div>
         </div>
-    </div>
-</footer>
-
-<script type="module" src="/src/js/javascript.js" defer></script>
-
+    </footer>
 </body>
-
 </html>

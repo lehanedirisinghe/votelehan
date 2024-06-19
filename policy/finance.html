@@ -4,26 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Vote Lehan | Policy | Finance Department</title>
     <meta name="description" content="Simple, effective taxes, clever investing of our funds to sensibly grow our people's wealth systematically as we transform into an advanced country.">
 
-    <!-- Content Security Policy for testing; unsafe inline script allowed for now as it is otherwise buggy on some test devices -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; report-uri https://votelehan.report-uri.com/r/d/csp/reportOnly;">
+    <!-- Meta tags for SEO -->
+    <meta name="keywords" content="Sri Lanka, Lehan Edirisinghe, political reform, national development, leadership, economic policies, social improvement, Vote Lehan, policy, governance">
+    <meta name="subject" content="Lehan's Vision to Develop Sri Lanka">
+    <meta name="author" content="Lehan Edirisinghe">
+    <meta name="date" content="2024-06-15">
+    <meta name="robots" content="index, follow">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="14 years">
+    <meta name="copyright" content="VoteLehan.com">
+    <meta name="generator" content="Microsoft Visual Studio Code">
 
-    <!-- Update this, with HTAccess on apache, test, then use or stop-->
+
+<!-- Content Security Policy for testing -->
+<meta http-equiv="Content-Security-Policy" content="
+default-src 'self';
+script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://www.googletagmanager.com https://cdn.jsdelivr.net https://www.google-analytics.com https://cdn.jsdelvr.net;
+style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+font-src 'self' https://fonts.gstatic.com;
+img-src 'self' data: https://www.googletagmanager.com;
+frame-src 'self' https://www.googletagmanager.com;
+connect-src 'self' https://www.google-analytics.com https://cdn.jsdelvr.net;">
+
+
+<!--  report-uri https://votelehan.report-uri.com/r/d/csp/reportOnly;" Keep in the server or htaccess instead as it does not work as a meta head tag for some weird reason-->
+
+<!-- Update this, with HTAccess on apache, test, then use or stop-->
     <meta http-equiv="Report-To" content="{&quot;group&quot;:&quot;csp-endpoint&quot;,&quot;max_age&quot;:10886400,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://votelehan.report-uri.com/a/d/g&quot;}],&quot;include_subdomains&quot;:true}">
+
     <meta http-equiv="NEL" content="{&quot;report_to&quot;:&quot;csp-endpoint&quot;,&quot;max_age&quot;:10886400,&quot;include_subdomains&quot;:true,&quot;success_fraction&quot;:0,&quot;failure_fraction&quot;:0.1}">
     
     <!-- X-Content-Type-Options to prevent MIME type sniffing -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
     <!-- Referrer-Policy to control the information sent in the Referer header -->
     <meta name="referrer" content="no-referrer">
 
     <!-- Privacy protections to visitors -->
     <meta http-equiv="Permissions-Policy" content="geolocation=(self), microphone=(), camera=(), gyroscope=(), magnetometer=(), usb=(), midi=(), accelerometer=(), autoplay=(self), fullscreen=(self)">
 
-    <!-- X-Frame-Options to prevent clickjacking -->
-    <meta http-equiv="X-Frame-Options" content="DENY">
     <!-- Strict-Transport-Security to enforce secure (HTTPS) connections to the server -->
     <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
 
@@ -36,20 +59,57 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
     <!-- Preload critical resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/src/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-        <link rel="stylesheet" href="/src/css/styles.css">
-    </noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="/src/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap">
+    <link rel="stylesheet" href="/src/css/styles.css">
+</noscript>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
 
     <!-- Favicon links -->
     <link rel="icon" href="/src/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/src/images/favicon-32x32.png" sizes="32x32" type="image/png">
+
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+
 </head>
 
+
 <body>
+
+<!-- Google Tag Manager -->
+    <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TBHTJPM6');
+    </script>
+<!-- End Google Tag Manager -->
+
+<!-- GA4 Configuration -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-80876GKS9T"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-80876GKS9T');
+    </script>
+<!-- End GA4 Configuration -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBHTJPM6"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!--JAVASCRIPT Vote Lehan -->
+<script type="module" src="/src/js/javascript.js" defer></script>
+
     <header>
         <nav>
             <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
@@ -64,107 +124,33 @@
         </nav>
     </header>
 
-    
+    <main>
 
-    <section>
-        <h2>Taxes</h2>
-        <p>These are my 10 taxes:</p>
-        <ul class="content-list">
-                <li>1. <strong>INCOME TAX</strong>:
-                    <ul>
-                        <li>20% from all citizens equally.</li>
-                        <li>+0.1% Wealth (Solidarity) Tax.</li>
-                    </ul>
-                </li>
-                <li>2. <strong>CORPORATE TAX</strong>:
-                    <ul>
-                        <li>7% for MNCs.</li>
-                        <li>14% for SMEs.</li>
-                        <li>20% for Big corporations.</li>
-                        <li>35% for SWFs.</li>
-                        <li>+20% for Harmful businesses.</li>
-                    </ul>
-                </li>
-                <li>3. <strong>SALES TAX</strong>:
-                    <ul>
-                        <li>10% on Value Chain.</li>
-                        <li>+15% Health Excise Duty.</li>
-                        <li>Adjusted based on Income Tier.</li>
-                    </ul>
-                </li>
-                <li>4. <strong>PROPERTY TAX</strong>:
-                    <ul>
-                        <li>10% on 20–100 year leases.</li>
-                        <li>+5% on LVT land value.</li>
-                        <li>+2.5% on PT property worth.</li>
-                    </ul>
-                </li>
-                <li>5. <strong>IMPORT TAX</strong>:
-                    <ul>
-                        <li>15% tariff.</li>
-                        <li>+15% on non-essentials.</li>
-                        <li>-5% on supply.</li>
-                        <li>-10% for allies.</li>
-                        <li>+25% for hostile entities.</li>
-                    </ul>
-                </li>
-                <li>6. <strong>ELECTRONIC ROAD PRICING</strong>:
-                    <ul>
-                        <li>+10% ERP fares for in-demand roads.</li>
-                        <li>+5% for public transport.</li>
-                    </ul>
-                </li>
-                <li>7. <strong>AUTOMATED PAYMENT TAX</strong>:
-                    <ul>
-                        <li>0.5% APT fee on digital transactions.</li>
-                        <li>+5% on cash payments.</li>
-                    </ul>
-                </li>
-                <li>8. <strong>CAPITAL GAINS TAX</strong>:
-                    <ul>
-                        <li>Maximum ROI schedule: ~80%.</li>
-                        <li>Can be waived to 0%.</li>
-                    </ul>
-                </li>
-                <li>9. <strong>CERTIFICATE OF ENTITLEMENT</strong>:
-                    <ul>
-                        <li>+10% COE for quota vehicle permits.</li>
-                        <li>+15% on scheduled items.</li>
-                    </ul>
-                </li>
-                <li>10. <strong>SRI LANKA WEALTH FUND</strong>:
-                    <ul>
-                        <li>10% SLWF from all citizens and PRs.</li>
-                        <li>+5% for government employees.</li>
-                    </ul>
-                </li>
-        </ul>
-    </section>
 
+
+</main>
 
 <footer>
-    <div id="cookie-consent" class="cookie-consent">
-        <p>Save cookies detailed in <a href="/terms.html">Terms</a> to load fully?
-            <button id="cookie-accept">Yes, I accept!</button>
-        </p>
-    </div>
     <div class="footer-container">
+        <div id="cookie-consent" class="cookie-consent">
+            <p>Save cookies detailed in <a href="/terms.html">Terms</a> to load fully?
+                <button id="cookie-accept">Yes, I accept!</button>
+            </p>
+        </div>
         <div class="footer-section">
-            <h2>Let's Develop Sri Lanka!</h2>
-            <p>Proudly buy a name for life as a Partner:</p>
-            <p><a href="/fund.html">Fund Now: $5</a></p>
             <p>Vote Lehan &copy; <span id="currentYear"></span></p>
             <p>
                 <a href="/terms.html">Terms</a>
+                <select id="language-selector" class="language-selector">
+                        <option value="en" selected>English</option>
+                        <option value="si">Sinhalese</option>
+                        <option value="ta">Tamil</option>
+                </select>
                 <a href="/src/layout.html">Site Layout</a> 
                 <a href="#top">Back to Top ↑</a>
             </p>
         </div>
     </div>
 </footer>
-
-<script type="module" src="/src/js/javascript.js" defer></script>
-
 </body>
-
 </html>

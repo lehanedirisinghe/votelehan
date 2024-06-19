@@ -1,54 +1,149 @@
+/* Chapter 1: Critical Layout Styles - Highest Priority
+1.1 CSS Variables
+1.2 General Styles for Body
+1.3 Color-coded Text Styles
+1.4 Navigation Menu
+1.5 Sidebar
+
+Chapter 2: Content Display - Important for Usability
+2.1 Section Styling
+2.2 Cookie Consent Popup
+2.3 Images
+2.4 Links
+2.5 Point Form or Lists
+2.6 Content-specific Lists
+2.7 Specific Styling for Problems List
+
+Chapter 3: Auxiliary Styles - Enhancing Aesthetics
+3.1 Buttons and Links
+3.2 Tables for Structured Data
+3.3 Hidden
+
+Chapter 4: Responsive Design - Ensuring Accessibility on Mobile Devices
+4.1 General Responsive Styles
+4.2 Navigation Responsive Styles
+4.3 Footer Responsive Styles
+
+Chapter 5: Footer Styles
+5.1 General Footer Styles
+5.2 Footer Container
+5.3 Footer Section
+5.4 Scroll to Top Button Styles
+
+Chapter 6: Modern Enhancements
+6.1 Modern Units for Flexibility
+6.2 Flexbox and Grid for Layouts
+6.3 Enhanced Media Queries
+6.4 Accessibility Enhancements */
+
 /* Main Stylesheet for the Website */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@400;500&display=swap');
+
+/* Applying fonts */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: var(--text-color);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    letter-spacing: 0.15px;
+    margin: 0;
+    padding-top: 4rem;
+    background-color: var(--background-color);
+    text-align: left;
+    text-rendering: optimizeLegibility;
+    font-variant-ligatures: common-ligatures;
+    font-kerning: normal;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 500; /* Medium weight */
+    margin-top: 3.25rem; /* Adjust the value to your preference */
+    margin-bottom: 0.75rem; /* Keeps the space consistent after the heading */
+}
+
+p {
+    margin-bottom: 1rem; /* Adjust the value to your preference */
+}
 
 /* Chapter 1: Critical Layout Styles - Highest Priority */
 
-/* 1.1 - General Styles for Body */
+/* 1.1 - CSS Variables */
+:root {
+    --primary-color: #444;
+    --secondary-color: #555;
+    --font-size-base: 1rem;
+    --spacing-base: 1rem;
+    --background-color: #f1f1f1;
+    --text-color: #444;
+    --heading-color: #444;
+    --link-color: #5462e1;
+    --link-visited-color: #006a0c;
+    --link-hover-color: #009e12;
+    --border-color: #ccc;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --button-bg-color: #673AB7;
+    --button-hover-bg-color: #875EC7;
+    --footer-bg-color: #f1f1f1;
+    --footer-text-color: #777;
+    --footer-text-secondary-color: #666;
+    /* Additional variables for spacing */
+    --padding-small: 0.5rem;
+    --padding-medium: 1rem;
+    --padding-large: 2rem;
+}
+
+/* 1.2 - General Styles for Body */
 body {
-    font-family: 'Roboto', Arial, sans-serif; /* Uniform font for better readability */
-    color: #444;
-    font-size: 16px; /* Standard text size for readability */
-    line-height: 1.6; /* Adjusted line height for better readability */
+    font-family: 'Roboto', Arial, sans-serif;
+    color: var(--text-color);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
     letter-spacing: 0.15px;
     margin: 0;
-    padding-top: 16px; /* Space for fixed navbar */
-    background-color: #f0f0f0; /* Soft purple background for a light theme */
+    padding-top: var(--padding-large);
+    background-color: var(--background-color);
+    text-align: left;
+    text-rendering: optimizeLegibility;
+    font-variant-ligatures: common-ligatures;
+    font-kerning: normal;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 header {
-    margin-bottom: 10px; /* Reduce the space below the header */
+    margin-bottom: 0.625rem;
 }
 
 main {
-    padding-top: 0; /* Remove unnecessary padding */
+    padding-top: 0;
 }
 
-
-html {
-    scroll-behavior: smooth; /* Smooth Scroll */
-}
-
-
+/* 1.3 - Color-coded text styles for clarity */
 .problem {
-    color: rgb(151, 24, 5); /* Change this to your desired color */
+    color: rgb(151, 24, 5);
     font-weight: normal;
 }
 
 .solution {
-    color: rgb(11, 47, 165); /* Change this to your desired color */
+    color: rgb(11, 47, 165);
     font-weight: normal;
 }
 
-
-/* 1.2 - Navigation Menu */
+/* 1.4 - Navigation Menu */
 nav {
-    background-color: rgba(240, 240, 240, 0.9); /* Purple background for distinct appearance */
-    color: #444; /* White text for contrast */
-    margin: 0px;
-    padding: 0px 0px;
-    position: fixed; /* Fixed at the top */
-    width: 100%; /* Full width */
+    background-color: rgba(240, 240, 240);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    width: 100%;
     top: 0;
-    z-index: 1000; /* Ensures navigation stays on top */
+    z-index: 1000;
     text-align: center;
 }
 
@@ -56,15 +151,15 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Horizontal alignment */
-    justify-content: center; /* Center items horizontally */
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
     display: inline;
     margin: 0;
-    padding: 0px 0px;
-    margin-right: 8px; /* Space between items */
+    padding: 0 0.15rem;
+    margin-right: 0.15rem;
 }
 
 nav ul.active {
@@ -74,15 +169,15 @@ nav ul.active {
 
 .hamburger {
     display: none;
-    font-size: 30px;
+    font-size: 1.875rem;
     background: none;
-    border: 2px solid #673AB7;
-    padding: 5px;
-    color: #673AB7;
+    border: 2px solid var(--button-bg-color);
+    padding: 0.3125rem;
+    color: var(--button-bg-color);
     cursor: pointer;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 0.625rem;
+    right: 0.625rem;
 }
 
 @media (max-width: 700px) {
@@ -105,55 +200,77 @@ nav ul.active {
 }
 
 nav ul li a {
-    color: #555;
+    color: var(--text-color);
     width: auto;
     text-decoration: none;
-    padding: 7px 8px;
+    padding: 0.4375rem 0.5rem;
     display: inline-block;
     text-align: center;
 }
 
 nav ul li a:hover {
-    background-color: #c1c1c1; /* Darker purple on hover/active */
+    background-color: #c1c1c1;
     color: #fafafa;
-    padding: 7px 8px;
 }
 
 nav ul li a.active {
     background-color: #747474;
     font-weight: bold;
     color: #fafafa;
-    padding: 7px 8px;
 }
 
-/* Menu changes on scroll */
-.navbar-white {
-    background-color: #f0f0f0;
-    transition: background-color 0.3s ease;
+/* Language icon specific styling */
+#language-icon img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(150%); /* Lightens the icon */
 }
 
-.nav-faded ul li a {
-    color: #aaa; /* Lighter color for faded effect */
+/* Ensure the language icon does not inherit active state styling */
+nav ul li a.active img {
+    filter: brightness(150%); /* Keep the icon light even if active */
 }
 
-.nav-faded ul li a.active {
-    background-color: #858585b9; /* Lighter shade of gray */
-    color: #fafafa; /* Darker text color for better readability */
-}
-
-
-
-/* 1.3 - Sidebar */
-.sidebar {
-    width: 200px;
-    background-color: #fafafa;
-    padding: 10px;
+/* Language Selector */
+#language-selector {
+    margin-left: 10px;
+    padding: 5px;
+    background-color: #f0f0f0; /* Light gray background */
     border: 1px solid #ccc;
     border-radius: 4px;
-    margin-right: 20px;
+    color: var(--footer-text-color);
+    font-family: 'Roboto';
+    font-size: 1rem;
+}
+
+#language-selector option {
+    background-color: #fff; /* White background for options */
+    color: var(--text-color);
+    font-family: 'Roboto';
+    font-size: 1rem;
+}
+
+/* Hide the select dropdown initially */
+.language-selector.hidden {
+    display: none;
+}
+
+/* Show the select dropdown */
+.language-selector.visible {
+    display: block;
+}
+
+/* 1.5 - Sidebar */
+.sidebar {
+    width: 12.5rem;
+    background-color: #fafafa;
+    padding: 0.625rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.25rem;
+    margin-right: 1.25rem;
     flex-shrink: 0;
     position: sticky;
-    top: 20px;
+    top: 1.25rem;
     height: fit-content;
 }
 
@@ -167,7 +284,7 @@ nav ul li a.active {
 }
 
 .sidebar ul li {
-    margin: 10px 0;
+    margin: 0.625rem 0;
 }
 
 .sidebar ul li a {
@@ -183,47 +300,30 @@ nav ul li a.active {
 
 /* 2.1 - Section Styling */
 section {
-    width: 33%; /* Adjusted width for better focus on content */
+    width: 40%; /* Adjusted width for better focus on content */
     margin: 3% auto; /* Centering sections */
-    padding: 6px 12px;
-    background-color: #f0f0f0;
-    border-radius: 0px; /* Rounded corners for modern look */
-    box-shadow: 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
-
-section h2,
-section h3 {
-    color: #555; /* Consistent text color */
-    margin-top: 20px; /* Adds space before headings */
-    margin-bottom: 8px; /* Adds space after headings */
-}
-
-section p {
-    color: #666;
-    font-size: 16px; /* Legible text size */
-    line-height: 1.6; /* Adjusted line height for better readability */
-    margin-top: 8px; /* Adds space before paragraphs */
-    margin-bottom: 16px; /* Adds space after paragraphs */
+    padding: 0.375rem 0.75rem;
+    background-color: #f5f5f5;
+    border-radius: 0.25rem; /* Rounded corners for modern look */
+    box-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.01), -1rem -1rem 2rem rgba(0, 0, 0, 0.01); /* Even subtler, lighter shadow */
 }
 
 /* 2.2 - Cookie Consent Popup */
 .cookie-consent {
     position: fixed;
-    bottom: 0px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
     background-color: rgba(248, 249, 250, 0.95);
     text-align: center;
-    padding: 0px 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    border-top: 2px solid #7E57C2;
-    border-radius: 3px;
-    display: flex; /* Hidden by default, switch to flex from none */
+    padding: 0.625rem;
+    border-top: 0.125rem solid var(--footer-text-color);
+    border-radius: 0.1875rem;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000; /* Ensure it appears above other elements */ 
+    z-index: 1000;
 }
 
 .cookie-consent.hidden {
@@ -231,29 +331,30 @@ section p {
 }
 
 .cookie-consent p {
-    margin: 10px;
-    font-size: 16px;
+    margin: 0.625rem;
+    font-size: var(--font-size-base);
     flex-grow: 1;
-}    
+}
 
 .cookie-consent button {
-    background-color: #875EC7;
+    background-color: var(--button-bg-color);
     color: white;
     border: none;
-    padding: 10px 10px;
+    padding: 0.625rem;
     cursor: pointer;
-    border-radius: 5px;
-    margin-left: 15px;
+    border-radius: 0.7125rem;
+    margin-left: 0.9375rem;
 }
 
 .cookie-consent button:hover {
-    background-color: #673AB7; /* Slightly darker on hover */
+    background-color: var(--button-hover-bg-color);
 }
 
 /* 2.3 - Images */
 .image-container {
     max-width: 100%;
-    margin-top: 10px;
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -263,96 +364,106 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+    /* Ensure images are responsive */
+    max-width: 100%;
+    height: auto;
 }
 
 /* 2.4 - Links */
 a {
-    color: #5462e1; /* Standard blue color for links */
-    text-decoration: none; /* Ensure links are underlined */
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:not(.main-nav):visited {
+    color: var(--link-visited-color);
 }
 
 a:hover {
-    color: #009e12; /* Slightly darker blue for hover state */
+    color: var(--link-hover-color);
     text-decoration: underline;
-    font-weight: none;
 }
 
-/* Visited state, excluding .main-nav links */
-a:not(.main-nav):visited {
-    color: #006a0c; /* Orange color for visited links */
-}
-
-/* To ensure global styles don't affect nav links */
 nav ul li a:hover {
     color: #fff;
     text-decoration: none;
 }
 
-/* Point form or Lists */
+/* 2.5 - Point form or Lists */
 ul li {
-    margin-bottom: 5px;
-    color: #666; /* Keep this off or at 0 px, as it messes up the nav menu which is also a list */
+    margin-bottom: 0.375rem;
+    color: #555;
+}
+
+/* Additional margin for the last list item */
+ul li:last-child {
+    margin-bottom: 1.75rem; /* Adjust this value as needed */
 }
 
 ol li {
-    margin-bottom: 5px;
-    color: #666;
-
+    margin-bottom: 0.375rem;
+    color: #555;
 }
 
-/* Add spacing to lists in content sections which we tag as content-list, which allows us to keep other lists as they are. */
+/* Additional margin for the last list item */
+ol li:last-child {
+    margin-bottom: 1.75rem; /* Adjust this value as needed */
+}
+
+/* 2.6 - Content-specific lists */
 .content-list li {
-    margin-bottom: 6px;
-    color: #666;    
+    margin-bottom: 0.375rem;
+    color: #555;
 }
 
-/* Specific styling for problems list */
+/* 2.7 - Specific styling for problems list */
 .problems-list {
-    list-style-type: disc; /* Standard bullet points */
-    padding-left: 20px; /* Add padding to align bullets properly */
-    margin: 0; /* Reset margin to avoid unintended spacing */
+    list-style-type: disc;
+    padding-left: 1.25rem;
+    margin: 0;
 }
 
 .problems-list li {
-    margin-bottom: 10px; /* Add spacing between list items */
-    color: #666; /* Consistent text color */
-    font-size: 16px; /* Ensure font size matches the rest of the content */
-    line-height: 1.6; /* Adjust line height for readability */
+    margin-bottom: 0.625rem;
+    color: #555;
+    font-size: var(--font-size-base);
+    line-height: 1.6;
 }
-
 
 /* Chapter 3: Auxiliary Styles - Enhancing Aesthetics */
 
 /* 3.1 - Buttons and Links */
 .button, button {
-    background-color: #673AB7; /* Green for visibility */
+    background-color: var(--button-bg-color);
     color: white;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     border: none;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     cursor: pointer;
     text-align: center;
 }
 
 .button:hover, button:hover {
-    background-color: #875EC7; /* Darker green on hover */
+    background-color: var(--button-hover-bg-color);
 }
 
 /* 3.2 - Tables for Structured Data */
-
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
+
 th, td {
-    padding: 15px;
+    padding: 0.9375rem;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
+
 th {
     background-color: #f2f2f2;
 }
+
 tr:hover {
     background-color: #f5f5f5;
 }
@@ -365,81 +476,87 @@ tr:hover {
 /* Chapter 4: Responsive Design - Ensuring Accessibility on Mobile Devices */
 @media (max-width: 700px) {
     .container, nav a {
-        width: 100%; /* Full width for smaller screens */
-        padding: 10px;
+        width: 100%;
+        padding: 0.625rem;
     }
 
     nav ul {
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column;
     }
 
     nav ul li {
-        text-align: center; /* Center-align items */
-        margin-right: 0; /* No right margin */
+        text-align: center;
+        margin-right: 0;
     }
 }
 
 /* Footer Styles */
 footer {
-    background: #f0f0f0;
-    color: #444;
+    background: var(--footer-bg-color);
+    color: var(--footer-text-secondary-color);
     text-align: center;
+    font-family: 'roboto', sans-serif; 
+    font-size: 16px;
     position: static;
     max-width: 100%;
     margin: 0 auto;
     height: auto;
-    padding: 10px 20px 70px 20px; /* Adjusted vertical padding */
+    padding: 0.35rem 1.25rem 3.5rem 1.25rem;
 }
 
 .footer-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 1200px;
+    max-width: 75rem;
     margin: 0 auto;
 }
 
 .footer-section {
-    margin: 5px 10px; /* Reduced margin for less spacing */
+    margin: 0.3125rem 0.625rem;
     flex: 1;
-    min-width: 200px;
-    max-width: 400px;
+    min-width: 12.5rem;
+    max-width: 25rem;
 }
 
 .footer-section h2 {
-    font-size: 26px;
-    margin-bottom: 5px; /* Reduced bottom margin for heading */
+    font-size: 1.625rem;
+    margin-bottom: 0.3125rem;
 }
 
 .footer-section p {
-    margin: 5px 0; /* Reduced margin for paragraphs */
+    margin: 0.3125rem 0;
 }
 
 .footer-section a {
-    color: #0014f4;
+    color: var(--footer-text-color);
+    font-size: 1rem;
+    
     text-decoration: none;
-    margin: 0 5px;
+    margin: 0 0.3125rem;
 }
 
 .footer-section a:hover {
     text-decoration: underline;
-    color: #009e12;
+    color: var(--primary-color);
 }
 
+.footer-section :not(.main-nav):visited {
+    color: var(--footer-text-color);
+}
 
-/* Chapter 6: Scroll to Top Button Styles - Ensuring Accessibility on Mobile Devices */
-
+/* Chapter 5: Scroll to Top Button Styles - Ensuring Accessibility on Mobile Devices */
 .scroll-to-top {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 1.25rem;
+    right: 1.25rem;
     background-color: #444;
     color: #fff;
-    padding: 10px 15px;
+    padding: 0.625rem;
     border-radius: 50%;
     text-align: center;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.25rem;
     z-index: 1000;
 }
 
@@ -448,3 +565,53 @@ footer {
     color: #fff;
 }
 
+/* Chapter 6: Modern Enhancements */
+
+/* 6.1 - Modern Units for Flexibility */
+html {
+    font-size: 16px; /* Base font size */
+}
+
+body {
+    font-size: 1rem; /* Using rem units for scalability */
+}
+
+h1 {
+    font-size: clamp(1.75rem, 2.5vw + 1rem, 3.5rem); /* Slightly larger responsive typography */
+}
+
+/* 6.2 - Flexbox and Grid for Layouts */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-base);
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 6.3 - Enhanced Media Queries */
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 6.4 - Accessibility Enhancements */
+body {
+    color: var(--primary-color);
+    background-color: var(--background-color);
+}
+
+a {
+    color: var(--link-color);
+}
+
+/* Focus states for accessibility */
+a:focus, button:focus {
+    outline: 2px solid var(--link-color);
+    outline-offset: 2px;
+}
