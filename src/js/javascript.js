@@ -482,9 +482,4 @@
 // Test, do not tolerate if js load speed is over 1000ms
 // Cut anything off, if it slows down the page load 
 // We can develop menu, to make nav easier
-// Config website to pre-load predicted pages 
-// We want the html loaded for all at least when original page is loaded
-// When layer 1: grandparent loads, layer 2: parent loads, layer 3: child loads
-// This speeds up load times, as you don't need more resources
-//
 //

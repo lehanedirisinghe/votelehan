@@ -457,6 +457,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 1.25rem;
+    font-size: 0.875rem; /* Updated font size */
 }
 
 th, td {
@@ -470,7 +471,17 @@ th {
 }
 
 tr:hover {
-    background-color: #f5f5f5;
+    background-color: #0080ff29 !important; /* Ensure hover color is applied */
+}
+
+/* Additional styles to prevent other sections from affecting the table */
+table, th, td, tr {
+    transition: background-color 0.3s ease; /* Add a smooth transition for hover effect */
+}
+
+section {
+    position: relative;
+    z-index: 0; /* Ensure sections do not interfere with table styles */
 }
 
 /* 3.3 - Hidden */
