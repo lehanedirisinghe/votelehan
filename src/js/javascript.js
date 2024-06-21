@@ -1,3 +1,71 @@
+/*
+1. Initialization and User Interaction
+   1.1. Initialize sound playback
+   1.2. Event listeners for user interactions
+
+2. Sound Management
+   2.1. Declare sound groups and directory
+   2.2. Function to get a random sound file from a specific group
+
+3. Event Listeners
+   3.1. Event listeners for specific interactions
+       3.1.1. Back to Top button
+       3.1.2. Image click
+   3.2. Event functions to play a random sound from a specified group
+   3.3. DOMContentLoaded event listener
+   3.4. Scroll event listeners
+
+4. Intersection Observer
+   4.1. Initialize Intersection Observer
+
+5. Critical Component Initialization
+   5.1. Initialize cookies consent
+   5.2. Initialize Google Analytics
+
+6. Non-Critical Component Initialization
+   6.1. Initialize user engagement tracking
+   6.2. Event listeners for navigation
+   6.3. Event listeners for buttons
+
+7. Additional Functionalities
+   7.1. Hamburger menu functionality
+   7.2. Language selector functionality
+   7.3. Setting the current year
+*/
+
+// 1. Initialization and User Interaction
+// 1.1. Initialize sound playback
+// 1.2. Event listeners for user interactions
+
+// 2. Sound Management
+// 2.1. Declare sound groups and directory
+// 2.2. Function to get a random sound file from a specific group
+
+// 3. Event Listeners
+// 3.1. Event listeners for specific interactions
+// 3.1.1. Back to Top button
+// 3.1.2. Image click
+// 3.2. Event functions to play a random sound from a specified group
+// 3.3. DOMContentLoaded event listener
+// 3.4. Scroll event listeners
+
+// 4. Intersection Observer
+// 4.1. Initialize Intersection Observer
+
+// 5. Critical Component Initialization
+// 5.1. Initialize cookies consent
+// 5.2. Initialize Google Analytics
+
+// 6. Non-Critical Component Initialization
+// 6.1. Initialize user engagement tracking
+// 6.2. Event listeners for navigation
+// 6.3. Event listeners for buttons
+
+// 7. Additional Functionalities
+// 7.1. Hamburger menu functionality
+// 7.2. Language selector functionality
+// 7.3. Setting the current year
+
 (function() {
     'use strict';
 
@@ -387,6 +455,36 @@
 
 })();
 
+    // 23. Prefetch pages after the main page has loaded
+        document.addEventListener("DOMContentLoaded", function() {
+        // Prefetch pages after the main page has loaded
+        const pages = [
+        '/policy.html',
+        '/economy.html',
+        '/social.html',
+        '/story.html',
+        '/partner.html'
+        ];
+
+        pages.forEach(function(page) {
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = page;
+        document.head.appendChild(link);
+        });
+});
+
+
 
 // We have to do promises, but thus far, no fail / issues reported
-// We might do
+// We might do modal and tool tips
+// Ajax is a good one for the home page news feed
+// Test, do not tolerate if js load speed is over 1000ms
+// Cut anything off, if it slows down the page load 
+// We can develop menu, to make nav easier
+// Config website to pre-load predicted pages 
+// We want the html loaded for all at least when original page is loaded
+// When layer 1: grandparent loads, layer 2: parent loads, layer 3: child loads
+// This speeds up load times, as you don't need more resources
+//
+//
