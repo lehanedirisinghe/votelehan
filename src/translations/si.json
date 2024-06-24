@@ -1,0 +1,107 @@
+{
+  "global": {
+    "vote-lehan-copyright": "Vote Lehan © 2024",
+    "terms": "නියමයන්",
+    "layout": "වෙබ් පිටු සැලසුම",
+    "back-to-top": "ඉහළට නැවත ↑",
+    "nav": {
+      "home": "Vote Lehan",
+      "policy": "ප්‍රතිපත්තිය",
+      "economy": "ආර්ථිකය",
+      "social": "සමාජ",
+      "story": "කථාව",
+      "partner": "හවුල්කරු"
+    },
+    "language": {
+      "english": "English",
+      "sinhalese": "Sinhalese",
+      "tamil": "Tamil",
+      "chinese": "Chinese",
+      "hindi": "Hindi"
+    }
+  },
+    "index": {
+      "title": "VoteLehan.com | ශ්‍රී ලංකාව: නැවත පුණරුද්ධානයක්!",
+      "description": "සංවර්ධිත ශ්‍රී ලංකාවක් සඳහා ලෙහාන්ට මනාපය දෙන්න. ප්රතිපත්ති, කතා සහ හවුල්කරුවන් ගැන ඉගෙන ගන්න.",
+      "keywords": "ශ්‍රී ලංකාව, ලෙහාන් එඩිරිසිංහ, දේශපාලන සංස්කරණය, ජාතික සංවර්ධනය, නායකත්වය, ආර්ථික ප්‍රතිපත්ති, සමාජ ප්‍රවර්ධනය, Vote Lehan, ප්‍රතිපත්තිය, ආණ්ඩුකරණය",
+      "subject": "මෙය ප්‍රධාන පිටුවයි",
+      "rating": "14 වසර",
+      "nav": {
+        "home": "Vote Lehan",
+        "policy": "ප්‍රතිපත්තිය",
+        "economy": "ආර්ථිකය",
+        "social": "සමාජ",
+        "story": "කථාව",
+        "partner": "හවුල්කරු"
+      },
+      "content": {
+        "welcome": "VoteLehan.com වෙත සාදරයෙන් පිළිගනිමු",
+        "introduction": "හෙලෝ, මම ලෙහාන්. ඔබ මගේ ශ්‍රී ලංකාව සංවර්ධනය කිරීමට ඇති දැක්ම සොයා ගත්තෙහා.",
+        "readingLanguage": "ඔබ කියවන භාෂාව:",
+        "message": "I speak English as my first language. But I speak Sinhala as my second language fluently! My grandma would tell me: 'We should be able to speak Sinhalese as Sinhalese.. '",
+        "vote-lehan-copyright": "Vote Lehan © 2024",
+        "terms": "නියමයන්",
+        "layout": "වෙබ් පිටු සැලසුම",
+        "back-to-top": "ඉහළට නැවත ↑"
+      }
+    },
+    "policy": {
+      "president": "ජනාධිපති",
+      "pm": "අග්‍රාමාත්‍ය",
+      "speaker": "කථානායක",
+      "finance": "මුදල්",
+      "foreign": "විදේශ",
+      "law": "නීතිය",
+      "home": "ගෘහ",
+      "defense": "ආරක්ෂාව"
+    },
+    "economy": {
+      "pmo": "අග්‍රාමාත්‍ය කාර්යාලය",
+      "trade": "ව්‍යාපාර",
+      "tech": "තාක්ෂණය",
+      "transport": "ප්‍රවාහනය",
+      "tourism": "සංචාරක",
+      "energy": "බලශක්ති",
+      "ports": "වරාය",
+      "housing": "නිවාස"
+    },
+    "social": {
+      "po": "මගේ කාර්යාලය",
+      "media": "මාධ්‍ය",
+      "education": "අධ්‍යාපන",
+      "health": "සෞඛ්‍යය",
+      "food": "අහාර",
+      "fun": "විනෝද",
+      "buddhist": "බෞද්ධ",
+      "womens": "කාන්තා"
+    },
+    "story": {
+      "history": "ඉතිහාසය",
+      "lehan": "ලෙහාන්",
+      "world": "ලෝකය",
+      "map": "සිතියම",
+      "military": "යුද",
+      "standards": "มาตිම",
+      "mnc": "බහුජාතික සමාගම්",
+      "wealth": "ධනය"
+    },
+    "partner": {
+      "voters": "මනාප දායකයන්",
+      "lobby": "ලොබිය",
+      "solutions": "විසඳුම්",
+      "compare": "සසඳන්න",
+      "games": "ක්‍රීඩා",
+      "connect": "සම්බන්ධ වන්න",
+      "contribute": "දායක වන්න",
+      "family": "පවුල"
+    },
+    "terms": {
+      "termsOfUse": "භාවිත නියමයන්",
+      "privacyPolicy": "පෞද්ගලිකත්ව ප්‍රතිපත්තිය",
+      "cookies": "කුකීස්",
+      "personalContent": "පෞද්ගලික අන්තර්ගතය",
+      "geographicRestrictions": "භූගෝලීය සීමා",
+      "websiteInfrastructure": "වෙබ් අඩවි යටිතල පහසුකම්"
+    }
+  }
+  

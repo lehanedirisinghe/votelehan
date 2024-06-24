@@ -1,0 +1,13 @@
+'si': 'si', // Sinhala
+        'ta': 'ta', // Tamil
+        'en': 'en', // English
+        'zh': 'zh', // Mandarin Chinese
+        'hi': 'hi', // Hindi
+        'es': 'es', // Spanish
+        'fr': 'fr', // French
+        'ar': 'ar', // Arabic
+        'ru': 'ru', // Russian
+        'ja': 'ja', // Japanese
+        'pt': 'pt', // Portuguese
+        'nl': 'nl' // Dutch
+    

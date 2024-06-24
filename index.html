@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>VoteLehan.com | Sri Lanka: A Nation Reborn! </title>
-    <meta name="description" content="Vote Lehan for a developed Sri Lanka. Learn policies, stories and partner.">
+    <title data-lang-key="index.title">VoteLehan.com | Sri Lanka: A Nation Reborn! </title>
+    <meta name="description" data-lang-key="index.description" content="Vote Lehan for a developed Sri Lanka. Learn policies, stories and partner.">
 
     <!-- Meta tags for SEO -->
-    <meta name="keywords" content="Sri Lanka, Lehan Edirisinghe, political reform, national development, leadership, economic policies, social improvement, Vote Lehan, policy, governance">
-    <meta name="subject" content="This is the home page">
+    <meta name="keywords" data-lang-key="index.keywords" content="Sri Lanka, Lehan Edirisinghe, political reform, national development, leadership, economic policies, social improvement, Vote Lehan, policy, governance">
+
+    <meta name="subject" data-lang-key="index.subject" content="This is the home page">
     <meta name="author" content="Lehan Edirisinghe">
     <meta name="date" content="2024-06-15">
     <meta name="robots" content="index, follow">
@@ -108,54 +109,96 @@ connect-src 'self' https://www.google-analytics.com https://cdn.jsdelvr.net;">
 <!--JAVASCRIPT Vote Lehan -->
 <script type="module" src="/src/js/javascript.js" defer></script>
 
+
+    <!-- JavaScript to force redirection -->
+    <script>
+        // Check if the current page is votelehan.com/index.html
+        if (window.location.hostname === 'votelehan.com' && window.location.pathname === '/index.html') {
+            // Redirect to votelehan.com
+            window.location.href = '/';
+        }
+    </script>
+
+    <!-- Noscript tag for users with JavaScript disabled -->
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=/">
+        <style>
+            .noscript-message {
+                display: block;
+                color: red;
+                font-size: 18px;
+                font-weight: bold;
+            }
+        </style>
+        <div class="noscript-message">
+            <p>
+            This is an automatically generated message.
+            </p>
+            <p>
+            JavaScript is likely disabled in your browser. You will be redirected to the correct page using HTML.
+            </p>
+            <p>
+            If not, please go to <a href="/">votelehan.com</a>.
+            </p>
+            <p>
+            We may block access after multiple attempts.
+            </p>
+
+        </div>
+    </noscript>
+
     <header>
         <nav>
             <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
             <ul id="menu">
-                <li><a href="/index.html" class="main-nav">Vote Lehan</a></li>
-                <li><a href="/policy.html" class="main-nav">Policy</a></li>
-                <li><a href="/economy.html" class="main-nav">Economy</a></li>
-                <li><a href="/social.html" class="main-nav">Social</a></li>
-                <li><a href="/story.html" class="main-nav">Story</a></li>
-                <li><a href="/partner.html" class="main-nav">Partner</a></li>
+                <li><a href="/index.html" class="main-nav" data-lang-key="home">Vote Lehan</a></li>
+                <li><a href="/policy.html" class="main-nav" data-lang-key="policy">Policy</a>
+                </li>
+                <li><a href="/economy.html" class="main-nav" data-lang-key="economy">Economy</a>
+                </li>
+                <li><a href="/social.html" class="main-nav" data-lang-key="social">Social</a>
+                </li>
+                <li><a href="/story.html" class="main-nav" data-lang-key="story">Story</a>
+                </li>
+                <li><a href="/partner.html" class="main-nav" data-lang-key="partner">Partner</a>
+                </li>
             </ul>
         </nav>
     </header>
-
-    <main>
-
-        <section id="votelehan.com">
-            <h1>VoteLehan.com </h1>
-            <p>Hi, I'm Lehan. You found my vision to develop Sri Lanka.</p>
-            <p>You are reading language:
     
-                <select id="language-selector" class="language selector">                    
-                    <option value="en" selected>English</option>
-                    <option value="si">Sinhalese</option>
-                    <option value="ta">Tamil</option></select>. 
-                
-                මම මගේ භාෂාවට ආදරෙයි. பெருமையுடன் தேர்ந்தெடுங்கள். </p>
+    <main>
+        <section id="content">
+            <h1 data-lang-key="welcome">VoteLehan.com</h1>
+            <p data-lang-key="introduction">Hi, I'm Lehan. You found my vision to develop Sri Lanka.</p>
+            <p data-lang-key="readingLanguage">You are reading language: </p>
+            <select id="language-selector" class="language-selector">
+                <option data-lang-key="language.english" value="en">English</option>
+                <option data-lang-key="language.sinhalese" value="si">Sinhalese</option>
+                <option data-lang-key="language.tamil" value="ta">Tamil</option>
+                <option data-lang-key="language.chinese" value="zh">Chinese</option>
+                <option data-lang-key="language.hindi" value="hi">Hindi</option>
+            </select>            
+            <p data-lang-key="message" id="message">ඔබ කියවන භාෂාව. பெருமையுடன் தேர்ந்தெடுங்கள்.</p>
 
             <div class="image-container">
                 <img src="/src/images/lehan.png" alt="Lehan Edirisinghe photograph with a flower in blue" loading="lazy">
             </div>
         </section>
-
     </main>
 
     <footer>
         <div id="cookie-consent" class="cookie-consent">
-            <p>Save cookies detailed in <a href="/terms.html">Terms</a> to load fully?
-                <button id="cookie-accept">Yes, I accept!</button>
+            <p data-lang-key="cookie-consent">Save cookies detailed in <a href="/terms.html">Terms</a> to load fully?
+                <button id="cookie-accept" data-lang-key="cookie-accept">Yes, I accept!</button>
             </p>
         </div>
         <div class="footer-container">
             <div class="footer-section">
-                <p>Vote Lehan &copy; <span id="currentYear"></span></p>
+                <p data-lang-key="vote-lehan-copyright">Vote Lehan &copy; <span id="currentYear"></span></p>
                 <p>
-                    <a href="/terms.html">Terms</a>
-                    <a href="/src/layout.html">Site Layout</a> 
-                    <a href="#top">Back to Top ↑</a>
+                    <a data-lang-key="terms" href="/terms.html">Terms</a>
+                    <a data-lang-key="layout" href="/src/layout.html">Site Layout</a> 
+                    <a data-lang-key="back-to-top" href="#top">Back to Top ↑</a>
                 </p>
             </div>
         </div>

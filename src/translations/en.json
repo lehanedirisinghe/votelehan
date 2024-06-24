@@ -1,0 +1,107 @@
+{
+  "global": {
+    "vote-lehan-copyright": "Vote Lehan © 2024",
+    "terms": "Terms",
+    "layout": "Site Layout",
+    "back-to-top": "Back to Top ↑",
+    "nav": {
+      "home": "Vote Lehan",
+      "policy": "Policy",
+      "economy": "Economy",
+      "social": "Social",
+      "story": "Story",
+      "partner": "Partner"
+    },
+    "language": {
+      "english": "English",
+      "sinhalese": "Sinhalese",
+      "tamil": "Tamil",
+      "chinese": "Chinese",
+      "hindi": "Hindi"
+    }
+  },
+    "index": {
+      "title": "VoteLehan.com | Sri Lanka: A Nation Reborn!",
+      "description": "Vote Lehan for a developed Sri Lanka. Learn policies, stories and partner.",
+      "keywords": "Sri Lanka, Lehan Edirisinghe, political reform, national development, leadership, economic policies, social improvement, Vote Lehan, policy, governance",
+      "subject": "This is the home page",
+      "rating": "14 years",
+      "nav": {
+        "home": "Vote Lehan",
+        "policy": "Policy",
+        "economy": "Economy",
+        "social": "Social",
+        "story": "Story",
+        "partner": "Partner"
+      },
+      "content": {
+        "welcome": "Welcome to VoteLehan.com",
+        "introduction": "Hi, I'm Lehan. You found my vision to develop Sri Lanka.",
+        "readingLanguage": "You are reading language:",
+        "message": "ඔබ කියවන භාෂාව. பெருமையுடன் தேர்ந்தெடுங்கள்.",
+        "vote-lehan-copyright": "Vote Lehan © 2024",
+        "terms": "Terms",
+        "layout": "Site Layout",
+        "back-top-top":"Back to Top ↑"
+      }
+    },
+    "policy": {
+      "president": "President",
+      "pm": "Prime Minister",
+      "speaker": "Speaker",
+      "finance": "Finance",
+      "foreign": "Foreign",
+      "law": "Law",
+      "home": "Home",
+      "defense": "Defense"
+    },
+    "economy": {
+      "pmo": "PM's Office",
+      "trade": "Trade",
+      "tech": "Tech",
+      "transport": "Transport",
+      "tourism": "Tourism",
+      "energy": "Energy",
+      "ports": "Ports",
+      "housing": "Housing"
+    },
+    "social": {
+      "po": "My Office",
+      "media": "Media",
+      "education": "Education",
+      "health": "Health",
+      "food": "Food",
+      "fun": "Fun",
+      "buddhist": "Buddhist",
+      "womens": "Women's"
+    },
+    "story": {
+      "history": "History",
+      "lehan": "Lehan",
+      "world": "World",
+      "map": "Map",
+      "military": "Military",
+      "standards": "Standards",
+      "mnc": "MNC",
+      "wealth": "Wealth"
+    },
+    "partner": {
+      "voters": "Voters",
+      "lobby": "Lobby",
+      "solutions": "Solutions",
+      "compare": "Compare",
+      "games": "Games",
+      "connect": "Connect",
+      "contribute": "Contribute",
+      "family": "Family"
+    },
+    "terms": {
+      "termsOfUse": "Terms of Use",
+      "privacyPolicy": "Privacy Policy",
+      "cookies": "Cookies",
+      "personalContent": "Personal Content",
+      "geographicRestrictions": "Geographic Restrictions",
+      "websiteInfrastructure": "Website Infrastructure"
+    }
+  }
+  

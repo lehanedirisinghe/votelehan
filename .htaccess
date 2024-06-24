@@ -1,8 +1,9 @@
 # Enable the rewrite engine
 RewriteEngine On
 
-# Redirect root URL to index.html
-RewriteRule ^$ /index.html [L]
+# Redirect index.html to votelehan.com
+RewriteCond %{THE_REQUEST} /index\.html [NC]
+RewriteRule ^index\.html$ / [R=301,L]
 
 # Redirect non-www to www
 RewriteCond %{HTTP_HOST} !^www\.

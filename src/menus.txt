@@ -1,0 +1,74 @@
+Level 1. root / grand parent:
+
+Level 2: folder / parent: 
+
+Level 3: file / child:
+
+***
+
+Level 1: 
+
+1.index.html --> votelehan.com
+2. policy.html
+3. economy.html
+4. social.html
+5. story.html
+6. partner.html
+7. terms.html
+.htaccess
+.sitemap
+
+Level 2:
+
+policy/
+1. president
+2. pm
+3. speaker
+4. finance
+5. foreign
+6. law
+7. home
+8. defense
+
+economy/
+9. pmo
+10. trade
+11. tech
+12. transport
+13. tourism
+14. energy
+15. ports
+16. housing
+
+social/
+17. po 
+18. media
+19. education
+20. health
+21. food
+22. fun
+23. buddhist
+24. women's 
+
+story/ 
+history
+lehan 
+world
+map
+military
+standards
+mnc 
+wealth
+
+partner/
+voters
+lobby
+solutions
+compare
+games
+connect
+contribute
+family
+
+src/
+site layout
